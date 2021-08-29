@@ -26,14 +26,28 @@ ul {
 h1.basic {
 	padding:0rem;
 	margin:0rem;
-};
+}
 
-section.top {
-	display: flex;
+div.mugshot-and-contact {
+	display:flex;
+	flex-direction:column;
+}
+
+@media (min-width: 600px) {
+	div.mugshot-and-contact {
+		flex-direction:row;
+	}
 }
 
 section.bio {
-	display: flex;
+	display:flex;
+	flex-direction:column;
+}
+
+@media (min-width: 1200px) {
+	section.bio {
+		flex-direction:row;
+	}
 }
 
 div.mugshot {
@@ -71,7 +85,7 @@ figure.pub {
 }
 
 img.pub-thumb {
-	width:12.5%;
+	width:13.5%;
 }
 
 figcaption.pub-info {

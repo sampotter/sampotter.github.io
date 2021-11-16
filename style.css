@@ -67,6 +67,10 @@ section.pubs {
 	padding:1rem;
 }
 
+section.courses {
+	padding:1rem;
+}
+
 figure.pub {
 	display: flex;
 	align-items: center;

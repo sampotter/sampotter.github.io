@@ -1,0 +1,77 @@
+* Numerical Analysis
+
+** Course information
+
+| Course number      | MATH-UA 252-005 (NYU), MA-UY.4424-C (Brooklyn) |
+| Semester           | Spring 2022                                    |
+| Instructor         | Sam Potter (sfp@cims.nyu.edu)                  |
+| Teaching assistant | Mariana Martinez-Aguilar                       |
+| Lecture            | Mon/Wed, 3:30-4:50PM, RGSH 204                 |
+| Recitation         | Fri, 2:00-3:20PM, RGSH 204                     |
+| Office hours       | **TBA**                                          |
+| Links              | [[https://brightspace.nyu.edu/d2l/home/168863][BrightSpace]]                                    |
+
+** Course description
+
+** Course materials
+
+   Readings for each section will be assigned and will be a mixture
+   of sections from textbooks and short papers. All material will
+   be accessible either through this website or NYU. You do not
+   need to purchase a textbook for this course.
+
+** Scribing
+
+   A different person will scribe each week. Everyone in the class
+   must scribe at least once. Scribing involves taking careful
+   notes during the lecture, typesetting them using LaTeX, and
+   sending them to me so that I can merge them into a set of course
+   notes which will be available on a shared Overleaf document.
+
+** Homework
+
+   Homework will be posted here as it is made available. It will
+   consist of a mix of written assignments and short programming
+   assignments. Written assignments must be prepared using LaTeX.
+
+** Programming
+
+   All of the programming assignments will be done using Python
+   along with the numpy, scipy, and matplotlib packages (and no
+   others).
+
+** Schedule
+
+   | Date       | Topics            | Materials |
+   |------------+-------------------+-----------|
+   | Jan 24     |                   |           |
+   | Jan 26     |                   |           |
+   | Jan 31     |                   |           |
+   | Feb 2      |                   |           |
+   | Feb 7      |                   |           |
+   | Feb 9      |                   |           |
+   | Feb 14     |                   |           |
+   | Feb 16     |                   |           |
+   | *Feb 21*     | Presidents' day   |           |
+   | Feb 23     |                   |           |
+   | Feb 28     |                   |           |
+   | Mar 2      |                   |           |
+   | Mar 7      |                   |           |
+   | Mar 9      |                   |           |
+   | *Mar 14--20* | Spring break      |           |
+   | Mar 21     |                   |           |
+   | Mar 23     |                   |           |
+   | Mar 28     |                   |           |
+   | Mar 30     |                   |           |
+   | Apr 4      |                   |           |
+   | Apr 6      |                   |           |
+   | Apr 11     |                   |           |
+   | Apr 13     |                   |           |
+   | Apr 18     |                   |           |
+   | Apr 20     |                   |           |
+   | Apr 25     |                   |           |
+   | Apr 27     |                   |           |
+   | May 2      |                   |           |
+   | May 4      |                   |           |
+   | May 9      |                   |           |
+   | *May 11--17* | Final exam period |           |

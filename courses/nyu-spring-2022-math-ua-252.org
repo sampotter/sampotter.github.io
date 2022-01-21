@@ -1,77 +1,106 @@
 * Numerical Analysis
 
+/🚧 This page will be updated continuously throughout the semester./ 🚧
+
 ** Course information
 
 | Course number      | MATH-UA 252-005 (NYU), MA-UY.4424-C (Brooklyn) |
 | Semester           | Spring 2022                                    |
 | Instructor         | Sam Potter (sfp@cims.nyu.edu)                  |
+| Office hours       | **TBA**                                          |
 | Teaching assistant | Mariana Martinez-Aguilar                       |
+| Office hours       | **TBA**                                          |
 | Lecture            | Mon/Wed, 3:30-4:50PM, RGSH 204                 |
 | Recitation         | Fri, 2:00-3:20PM, RGSH 204                     |
-| Office hours       | **TBA**                                          |
-| Links              | [[https://brightspace.nyu.edu/d2l/home/168863][BrightSpace]]                                    |
+| Links              | [[https://brightspace.nyu.edu/d2l/home/168863][BrightSpace]], [[./nyu-spring-2022-math-ua-252.org][syllabus]]                          |
 
-** Course description
+** Description
 
-** Course materials
+   This is an introductory course in numerical analysis. Topics
+   include: the solution of linear and nonlinear equations,
+   conditioning, least squares, numerical computation of eigenvalues,
+   interpolation, and quadrature. The focus is on the analysis and
+   implementation of numerical methods.
 
-   Readings for each section will be assigned and will be a mixture
-   of sections from textbooks and short papers. All material will
-   be accessible either through this website or NYU. You do not
-   need to purchase a textbook for this course.
+*** Materials
 
-** Scribing
+   Readings will be posted in the schedule below. All material will be
+   accessible either through this website or NYU. You do not need to
+   purchase a textbook for this course.
 
-   A different person will scribe each week. Everyone in the class
-   must scribe at least once. Scribing involves taking careful
-   notes during the lecture, typesetting them using LaTeX, and
-   sending them to me so that I can merge them into a set of course
-   notes which will be available on a shared Overleaf document.
+*** Homework
 
-** Homework
+   There will be written assignments and programming assignments.
 
-   Homework will be posted here as it is made available. It will
-   consist of a mix of written assignments and short programming
-   assignments. Written assignments must be prepared using LaTeX.
+   Written assignments will consist of short theoretical exercises
+   (proofs) which must be prepared using LaTeX.
 
-** Programming
+   Programming assignments will be done using Python along with the
+   numpy, scipy, and matplotlib packages.
 
-   All of the programming assignments will be done using Python
-   along with the numpy, scipy, and matplotlib packages (and no
-   others).
+*** Scribing
+
+	One person will scribe each class, and each person will be
+	required to scribe at least once. This will count towards 5% of
+	your grade. The scribed notes will be compiled into a shared
+	Overleaf document for you all to use.
+
+*** Grading
+
+   | Scribing                |  5% |
+   | Written assignments     | 15% |
+   | Programming assignments | 15% |
+   | Midterm                 | 30%  |
+   | Final                   | 35% |
 
 ** Schedule
 
-   | Date       | Topics            | Materials |
-   |------------+-------------------+-----------|
-   | Jan 24     |                   |           |
-   | Jan 26     |                   |           |
-   | Jan 31     |                   |           |
-   | Feb 2      |                   |           |
-   | Feb 7      |                   |           |
-   | Feb 9      |                   |           |
-   | Feb 14     |                   |           |
-   | Feb 16     |                   |           |
-   | *Feb 21*     | Presidents' day   |           |
-   | Feb 23     |                   |           |
-   | Feb 28     |                   |           |
-   | Mar 2      |                   |           |
-   | Mar 7      |                   |           |
-   | Mar 9      |                   |           |
-   | *Mar 14--20* | Spring break      |           |
-   | Mar 21     |                   |           |
-   | Mar 23     |                   |           |
-   | Mar 28     |                   |           |
-   | Mar 30     |                   |           |
-   | Apr 4      |                   |           |
-   | Apr 6      |                   |           |
-   | Apr 11     |                   |           |
-   | Apr 13     |                   |           |
-   | Apr 18     |                   |           |
-   | Apr 20     |                   |           |
-   | Apr 25     |                   |           |
-   | Apr 27     |                   |           |
-   | May 2      |                   |           |
-   | May 4      |                   |           |
-   | May 9      |                   |           |
-   | *May 11--17* | Final exam period |           |
+   | Week | Date        | Topics                                 | Materials | Assignments |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #1   | Jan 24      | Bisection and secant methods           |           |             |
+   |      | Jan 26      | Newton's method                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #2   | Jan 31      | Convergence of 1D nonlinear solvers    |           |             |
+   |      | Feb 2       |                                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #3   | Feb 7       | Roundoff error, floating-point numbers |           |             |
+   |      | Feb 9       | Review of linear algebra               |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #4   | Feb 14      | LU decomposition                       |           |             |
+   |      | Feb 16      |                                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #5   | *Feb 21*      | Presidents' day                        |           |             |
+   |      | Feb 23      | Solving systems of nonlinear equations |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #6   | Feb 28      | Overdetermined linear systems          |           |             |
+   |      | Mar 2       | Least squares                          |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #7   | Mar 7       | *Review*                                 |           |             |
+   |      | Mar 9       | *Midterm*                                |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   |      | *Mar 14--20*  | Spring break                           |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #8   | Mar 21      | Eigenvalues                            |           |             |
+   |      | Mar 23      | QR decomposition                       |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #9   | Mar 28      | Singular value decomposition           |           |             |
+   |      | Mar 30      | Low-rank approximation                 |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #10  | Apr 4       | Polynomial interpolation               |           |             |
+   |      | Apr 6       |                                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #11  | Apr 11      | Piecewise polynomial interpolation     |           |             |
+   |      | Apr 13      |                                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #12  | Apr 18      | Orthogonal polynomials                 |           |             |
+   |      | Apr 20      |                                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #13  | Apr 25      | Numerical quadrature                   |           |             |
+   |      | Apr 27      |                                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #14  | May 2       | TBD                                    |           |             |
+   |      | May 4       |                                        |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   | #15  | May 9       | *Review*                                 |           |             |
+   |------+-------------+----------------------------------------+-----------+-------------|
+   |      | *May 11--17*  | Final exam period                      |           |             |

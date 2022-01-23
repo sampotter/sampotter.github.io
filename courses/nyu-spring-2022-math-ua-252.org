@@ -59,15 +59,15 @@
    | Scribing                |  5% |
    | Written assignments     | 15% |
    | Programming assignments | 15% |
-   | Midterm                 | 30%  |
+   | Midterm                 | 30% |
    | Final                   | 35% |
-
+g
 ** Schedule
 
    | Week | Date       | Topics                                 | Scribe          | Materials | Assignments |
    |------+------------+----------------------------------------+-----------------+-----------+-------------|
    | #1   | Jan 24     | Bisection and secant methods           | Tomas Luzuriaga |           |             |
-   |      | Jan 26     | Newton's method                        |                 |           |             |
+   |      | Jan 26     | Newton's method                        | Riya Mokashi    |           |             |
    |------+------------+----------------------------------------+-----------------+-----------+-------------|
    | #2   | Jan 31     | Convergence of 1D nonlinear solvers    |                 |           |             |
    |      | Feb 2      |                                        |                 |           |             |

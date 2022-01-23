@@ -69,7 +69,7 @@ g
    | #1   | Jan 24     | Bisection and secant methods           | Tomas Luzuriaga |           |             |
    |      | Jan 26     | Newton's method                        | Riya Mokashi    |           |             |
    |------+------------+----------------------------------------+-----------------+-----------+-------------|
-   | #2   | Jan 31     | Convergence of 1D nonlinear solvers    |                 |           |             |
+   | #2   | Jan 31     | Convergence of 1D nonlinear solvers    | Nikhil Isac     |           |             |
    |      | Feb 2      |                                        |                 |           |             |
    |------+------------+----------------------------------------+-----------------+-----------+-------------|
    | #3   | Feb 7      | Roundoff error, floating-point numbers |                 |           |             |

@@ -1,6 +1,6 @@
 * Numerical Analysis
 
-/🚧 This page will be updated continuously throughout the semester./ 🚧
+🚧 /This page will be updated continuously throughout the semester./ 🚧
 
 ** Course information
 
@@ -45,6 +45,15 @@
 	your grade. The scribed notes will be compiled into a shared
 	Overleaf document for you all to use.
 
+	[[https://www.overleaf.com/project/61eb071a35c3d0197d662200][Link to the scribed lecture notes on Overleaf]] (requires access).
+
+	Here's our current "scribing workflow":
+	1. write notes by hand (or whatever is most comfortable for you) during class
+	2. after class, re-write them using LaTeX however you prefer (this can be directly in Overleaf or locally on your computer)
+	3. send me the .tex file or share the Overleaf document
+	4. I will edit them lightly and send them back to you for you to make sure I didn't screw them up :-)
+    5. I will merge them into the shared notes
+
 *** Grading
 
    | Scribing                |  5% |
@@ -55,52 +64,52 @@
 
 ** Schedule
 
-   | Week | Date        | Topics                                 | Materials | Assignments |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #1   | Jan 24      | Bisection and secant methods           |           |             |
-   |      | Jan 26      | Newton's method                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #2   | Jan 31      | Convergence of 1D nonlinear solvers    |           |             |
-   |      | Feb 2       |                                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #3   | Feb 7       | Roundoff error, floating-point numbers |           |             |
-   |      | Feb 9       | Review of linear algebra               |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #4   | Feb 14      | LU decomposition                       |           |             |
-   |      | Feb 16      |                                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #5   | *Feb 21*      | Presidents' day                        |           |             |
-   |      | Feb 23      | Solving systems of nonlinear equations |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #6   | Feb 28      | Overdetermined linear systems          |           |             |
-   |      | Mar 2       | Least squares                          |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #7   | Mar 7       | *Review*                                 |           |             |
-   |      | Mar 9       | *Midterm*                                |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   |      | *Mar 14--20*  | Spring break                           |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #8   | Mar 21      | Eigenvalues                            |           |             |
-   |      | Mar 23      | QR decomposition                       |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #9   | Mar 28      | Singular value decomposition           |           |             |
-   |      | Mar 30      | Low-rank approximation                 |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #10  | Apr 4       | Polynomial interpolation               |           |             |
-   |      | Apr 6       |                                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #11  | Apr 11      | Piecewise polynomial interpolation     |           |             |
-   |      | Apr 13      |                                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #12  | Apr 18      | Orthogonal polynomials                 |           |             |
-   |      | Apr 20      |                                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #13  | Apr 25      | Numerical quadrature                   |           |             |
-   |      | Apr 27      |                                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #14  | May 2       | TBD                                    |           |             |
-   |      | May 4       |                                        |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   | #15  | May 9       | *Review*                                 |           |             |
-   |------+-------------+----------------------------------------+-----------+-------------|
-   |      | *May 11--17*  | Final exam period                      |           |             |
+   | Week | Date       | Topics                                 | Scribe          | Materials | Assignments |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #1   | Jan 24     | Bisection and secant methods           | Tomas Luzuriaga |           |             |
+   |      | Jan 26     | Newton's method                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #2   | Jan 31     | Convergence of 1D nonlinear solvers    |                 |           |             |
+   |      | Feb 2      |                                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #3   | Feb 7      | Roundoff error, floating-point numbers |                 |           |             |
+   |      | Feb 9      | Review of linear algebra               |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #4   | Feb 14     | LU decomposition                       |                 |           |             |
+   |      | Feb 16     |                                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #5   | *Feb 21*     | Presidents' day                        |                 |           |             |
+   |      | Feb 23     | Solving systems of nonlinear equations |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #6   | Feb 28     | Overdetermined linear systems          |                 |           |             |
+   |      | Mar 2      | Least squares                          |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #7   | Mar 7      | *Review*                                 |                 |           |             |
+   |      | Mar 9      | *Midterm*                                |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   |      | *Mar 14--20* | Spring break                           |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #8   | Mar 21     | Eigenvalues                            |                 |           |             |
+   |      | Mar 23     | QR decomposition                       |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #9   | Mar 28     | Singular value decomposition           |                 |           |             |
+   |      | Mar 30     | Low-rank approximation                 |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #10  | Apr 4      | Polynomial interpolation               |                 |           |             |
+   |      | Apr 6      |                                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #11  | Apr 11     | Piecewise polynomial interpolation     |                 |           |             |
+   |      | Apr 13     |                                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #12  | Apr 18     | Orthogonal polynomials                 |                 |           |             |
+   |      | Apr 20     |                                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #13  | Apr 25     | Numerical quadrature                   |                 |           |             |
+   |      | Apr 27     |                                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #14  | May 2      | TBD                                    |                 |           |             |
+   |      | May 4      |                                        |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   | #15  | May 9      | *Review*                                 |                 |           |             |
+   |------+------------+----------------------------------------+-----------------+-----------+-------------|
+   |      | *May 11--17* | Final exam period                      |                 |           |             |

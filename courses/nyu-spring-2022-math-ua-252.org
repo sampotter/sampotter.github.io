@@ -61,7 +61,7 @@
    | Programming assignments | 15% |
    | Midterm                 | 30% |
    | Final                   | 35% |
-g
+
 ** Schedule
 
    | Week | Date       | Topics                                 | Scribe          | Materials | Assignments |

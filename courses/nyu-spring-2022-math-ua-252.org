@@ -82,7 +82,7 @@
    |      | Feb 23     | Solving systems of nonlinear equations | Maosen Tang     |                      |           |
    |------+------------+----------------------------------------+-----------------+----------------------+-----------|
    | #6   | Feb 28     | Overdetermined linear systems          | Fatima Mehdi    |                      |           |
-   |      | Mar 2      | Least squares                          |                 |                      |           |
+   |      | Mar 2      | Least squares                          | Junyao Chen     |                      |           |
    |------+------------+----------------------------------------+-----------------+----------------------+-----------|
    | #7   | Mar 7      | *Review*                                 |                 |                      |           |
    |      | Mar 9      | *Midterm*                                |                 |                      |           |
@@ -92,7 +92,7 @@
    | #8   | Mar 21     | Eigenvalues                            | Richen Du       |                      |           |
    |      | Mar 23     | QR decomposition                       | Yishi Wang      |                      |           |
    |------+------------+----------------------------------------+-----------------+----------------------+-----------|
-   | #9   | Mar 28     | Singular value decomposition           |                 |                      |           |
+   | #9   | Mar 28     | Singular value decomposition           | Rachael Teng    |                      |           |
    |      | Mar 30     | Low-rank approximation                 |                 |                      |           |
    |------+------------+----------------------------------------+-----------------+----------------------+-----------|
    | #10  | Apr 4      | Polynomial interpolation               |                 |                      |           |

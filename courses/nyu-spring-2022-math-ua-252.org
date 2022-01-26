@@ -78,11 +78,11 @@ And some resources on LaTeX:
 
 *** Grading
 
-   | Scribing                |  5% |
-   | Written assignments     | 15% |
-   | Programming assignments | 15% |
+   | Scribing                | 10% |
+   | Written assignments     | 10% |
+   | Programming assignments | 20% |
    | Midterm                 | 30% |
-   | Final                   | 35% |
+   | Final                   | 30% |
 
 ** Schedule
 

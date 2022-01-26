@@ -74,7 +74,7 @@ And some resources on LaTeX:
 
 1. [[https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes][Overleaf - Learn LaTeX in 30 minutes]]
 2. [[https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath][Overleaf - Aligning equations with ~amsmath~]]
-3. Overleaf has a ton of great LaTeX resources---just look at the list of guides on the left-hand side of the previous two pages. In general, if you are stuck on how to do something in LaTeX, try searching Overleaf's docs, or just ask me!)
+3. Overleaf has a ton of great LaTeX resources---just look at the list of guides on the left-hand side of the previous two pages. In general, if you are stuck on how to do something in LaTeX, try searching Overleaf's docs, or just ask me.
 
 *** Grading
 

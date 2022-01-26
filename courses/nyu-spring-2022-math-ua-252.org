@@ -54,6 +54,30 @@
 	4. I will edit them lightly and send them back to you for you to make sure I didn't screw them up :-)
     5. I will merge them into the shared notes
 
+**** How to scribe
+
+When it comes to scribing, here are a few important things to remember:
+
+1. 30 other people will have to read your notes => they must be understandable
+2. you must include written words to ease the exposition
+3. you must use LaTeX to typeset the notes properly
+4. you must include the majority of the content of the lecture
+
+To achieve this, we will go back and forth and edit your notes until I deem them acceptable. Only then will you receive credit for scribing. My goal: you are thoughtful about the process and put effort into it. Please be conscientious and consider your classmates.
+
+Here are some resources on mathematical writing:
+
+1. [[https://web.cs.ucdavis.edu/~amenta/w10/writingman.pdf][A Guide to Writing Mathematics]]
+2. [[https://faculty.math.illinois.edu/~kkirkpat/good-math-writing.pdf][Guidelines for Good Mathematical Writing]]
+3. [[https://persweb.wabash.edu/facstaff/turnerw/Writing/writing.pdf][A Brief Introduction to Mathematical Writing]]
+4. [[https://math.mit.edu/%7Epoonen/papers/writing.pdf][Practical Suggestions for Mathematical Writing]]
+
+And some resources on LaTeX:
+
+1. [[https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes][Overleaf - Learn LaTeX in 30 minutes]]
+2. [[https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath][Overleaf - Aligning equations with ~amsmath~]]
+3. Overleaf has a ton of great LaTeX resources---just look at the list of guides on the left-hand side of the previous two pages. In general, if you are stuck on how to do something in LaTeX, try searching Overleaf's docs, or just ask me!)
+
 *** Grading
 
    | Scribing                |  5% |

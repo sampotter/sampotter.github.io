@@ -93,7 +93,7 @@
    |      | Mar 23     | QR decomposition                       | Yishi Wang      |                      |           |
    |------+------------+----------------------------------------+-----------------+----------------------+-----------|
    | #9   | Mar 28     | Singular value decomposition           | Rachael Teng    |                      |           |
-   |      | Mar 30     | Low-rank approximation                 |                 |                      |           |
+   |      | Mar 30     | Low-rank approximation                 | Arnav Kanwal    |                      |           |
    |------+------------+----------------------------------------+-----------------+----------------------+-----------|
    | #10  | Apr 4      | Polynomial interpolation               |                 |                      |           |
    |      | Apr 6      |                                        |                 |                      |           |

@@ -89,7 +89,7 @@ And some resources on LaTeX:
    | Week | Date       | Topics                                 | Scribe          | Materials            | Due          |
    |------+------------+----------------------------------------+-----------------+----------------------+--------------|
    | #1   | Jan 24     | Course intro, Babylonian algorithm     | Tomas Luzuriaga | [[https://cims.nyu.edu/~oneil/courses/sp18-math252/trefethen-def-na.pdf][What is NA?]], [[https://www.cantorsparadise.com/a-modern-look-at-square-roots-in-the-babylonian-way-ccd48a5e8716][Babylon]] |              |
-   |      | Jan 26     | Fixed point iterations                 | Riya Mokashi    |                      |              |
+   |      | Jan 26     | Fixed point iterations                 | Riya Mokashi    | [[./nyu-spring-2022-math-ua-252/suli-ch1.pdf][Suli (Ch. 1)]]         |              |
    |------+------------+----------------------------------------+-----------------+----------------------+--------------|
    | #2   | Jan 31     | Solving nonlinear equations in 1D      | Nikhil Isac     |                      |              |
    |      | Feb 2      |                                        | Mei Shin Lee    |                      |              |

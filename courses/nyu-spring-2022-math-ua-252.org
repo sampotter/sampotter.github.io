@@ -90,10 +90,10 @@ And some resources on LaTeX:
    | Week | Date       | Topics                                    | Scribe        | Materials            | Due          |
    |------+------------+-------------------------------------------+---------------+----------------------+--------------|
    | #1   | Jan 24     | Course intro, Babylonian algorithm        |               | [[https://cims.nyu.edu/~oneil/courses/sp18-math252/trefethen-def-na.pdf][What is NA?]], [[https://www.cantorsparadise.com/a-modern-look-at-square-roots-in-the-babylonian-way-ccd48a5e8716][Babylon]] |              |
-   |      | Jan 26     | Fixed point iterations                    | Riya Mokashi  | [[./nyu-spring-2022-math-ua-252/suli-ch1.pdf][Suli (Ch. 1)]]         |              |
+   |      | Jan 26     | Fixed point iterations                    | [[./nyu-spring-2022-math-ua-252/scribed-notes-1-26.pdf][Riya Mokashi]]  | [[./nyu-spring-2022-math-ua-252/suli-ch1.pdf][Suli (Ch. 1)]]         |              |
    |------+------------+-------------------------------------------+---------------+----------------------+--------------|
-   | #2   | Jan 31     | Bisection, secant method, Newton's method | Nikhil Isac   |                      |              |
-   |      | Feb 2      |                                           | Mei Shin Lee  |                      |              |
+   | #2   | Jan 31     | Bisection, secant method, Newton's method | [[./nyu-spring-2022-math-ua-252/scribed-notes-1-31.pdf][Nikhil Isac]]   |                      |              |
+   |      | Feb 2      |                                           | [[./nyu-spring-2022-math-ua-252/scribed-notes-2-2.pdf][Mei Shin Lee]]  |                      |              |
    |------+------------+-------------------------------------------+---------------+----------------------+--------------|
    | #3   | Feb 7      | Roundoff error, floating-point numbers    | Nigel Shen    |                      | [[./nyu-spring-2022-math-ua-252/written1.pdf][written1.pdf]] |
    |      | Feb 9      | Review of linear algebra                  | Cindy Zhang   |                      |              |

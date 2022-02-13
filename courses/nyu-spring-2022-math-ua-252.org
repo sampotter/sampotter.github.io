@@ -105,10 +105,11 @@ And some resources on LaTeX:
    |      | Feb 16     |                                                      | Chuanyang Jin |                      |                                  |
    |------+------------+------------------------------------------------------+---------------+----------------------+----------------------------------|
    | #5   | *Feb 21*     | Presidents' day                                      |               |                      |                                  |
-   |      | Feb 23     | Solving systems of nonlinear equations               | Maosen Tang   |                      |                                  |
+   |      | Feb 23     | Solving systems of nonlinear equations               | Maosen Tang   |                      | [[./nyu-spring-2022-math-ua-252/written2.pdf][written2.pdf]]                     |
    |------+------------+------------------------------------------------------+---------------+----------------------+----------------------------------|
    | #6   | Feb 28     | Overdetermined linear systems                        | Fatima Mehdi  |                      |                                  |
    |      | Mar 2      | Least squares                                        | Junyao Chen   |                      |                                  |
+   |      | Mar 4      |                                                      |               |                      | [[./nyu-spring-2022-math-ua-252/prog2.pdf][prog2.pdf]]                        |
    |------+------------+------------------------------------------------------+---------------+----------------------+----------------------------------|
    | #7   | Mar 7      | *Review*                                               |               |                      |                                  |
    |      | Mar 9      | *Midterm*                                              |               |                      |                                  |

@@ -124,7 +124,7 @@ And some resources on LaTeX:
    | #9   | Mar 28          | Lucas Hsu           | Eigenvalue algorithms                                |                            |                                  |
    |      | Mar 30          | Arnav Kanwal        | Eigenvalue algorithms (continued)                    |                            |                                  |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|
-   | #10  | Apr 4           | Yishi Wang          | Lagrange interpolation                               |                            |                                  |
+   | #10  | Apr 4           | Yishi Wang          | Lagrange interpolation                               | [[./nyu-spring-2022-math-ua-252/prenter--splines-and-variational-methods.pdf][Prenter]]                    |                                  |
    |      | Apr 6           | Elaine Li           |                                                      |                            |                                  |
    |      | Apr 10          |                     |                                                      |                            | [[./nyu-spring-2022-math-ua-252/prog3.pdf][prog3.pdf]]                        |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|

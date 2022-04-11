@@ -125,10 +125,10 @@ And some resources on LaTeX:
    |      | Mar 30          | Arnav Kanwal        | Eigenvalue algorithms (continued)                    |                            |                                  |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|
    | #10  | Apr 4           | Yishi Wang          | Lagrange interpolation                               | [[./nyu-spring-2022-math-ua-252/prenter--splines-and-variational-methods.pdf][Prenter]]                    |                                  |
-   |      | Apr 6           | Elaine Li           |                                                      |                            |                                  |
+   |      | Apr 6           | Elaine Li           | Piecewise Lagrange interpolation                     |                            |                                  |
    |      | Apr 10          |                     |                                                      |                            | [[./nyu-spring-2022-math-ua-252/prog3.pdf][prog3.pdf]]                        |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|
-   | #11  | Apr 11          | Jiahao Hui          |                                                      |                            |                                  |
+   | #11  | Apr 11          | Jiahao Hui          | Function approximation                               |                            |                                  |
    |      | Apr 13          | Zijun Wang          |                                                      |                            |                                  |
    |      |                 |                     |                                                      |                            | [[./nyu-spring-2022-math-ua-252/written4.pdf][written4.pdf]]                     |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|

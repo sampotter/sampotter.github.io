@@ -132,7 +132,7 @@ And some resources on LaTeX:
    |      | Apr 13          |                     | *Class canceled*                                       |                            |                                  |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|
    | #12  | Apr 18          | Minghui Xia         | Function approximation: $L^2$                        |                            |                                  |
-   |      | Apr 20          | Danny Chen          | More Vandermonde                                     |                            |                                  |
+   |      | Apr 20          | Danny Chen          | More Vandermonde                                     | x                          |                                  |
    |      | Apr 24 (Sunday) |                     |                                                      |                            | [[./nyu-spring-2022-math-ua-252/prog3.pdf][prog3.pdf]]                        |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|
    | #13  | Apr 25          | Richen Du           | Hermite interpolation                                |                            |                                  |

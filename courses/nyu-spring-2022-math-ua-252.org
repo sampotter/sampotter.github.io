@@ -146,7 +146,7 @@ And some resources on LaTeX:
    | #15  | May 9           | Saif Azim           | Review                                               |                            |                                  |
    |------+-----------------+---------------------+------------------------------------------------------+----------------------------+----------------------------------|
    |      | *May 11--17*      |                     | Final exam period                                    |                            |                                  |
-   |      | May 17 (Tues)   |                     |                                                      |                            | [[./nyu-spring-2022-math-ua-252/prog4.pdf][prog4.pdf]]                        |
+   |      | May 20 (Fri)    |                     |                                                      |                            | [[./nyu-spring-2022-math-ua-252/prog4.pdf][prog4.pdf]]                        |
    |      | May 20 (Fri)    |                     |                                                      |                            | Written extra credit deadline    |
 
 # OLD SCHEDULE:

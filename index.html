@@ -4,7 +4,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-	<meta name="description" content="Academic home page of Samuel F. Potter"
+	<meta name="description" content="Academic home page of Samuel F. Potter">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/ami0bso.css">
@@ -15,16 +15,17 @@
 	<section class="nav-bar" style="padding:1rem;">
 	  <a href="https://sampotter.github.io">Sam(uel F.) Potter</a> /
 	  <a href="#about-me">About me</a> /
-	  <a href="#software">Software</a> /
-	  <a href="#publications">Publications</a> /
-	  <a href="#courses">Courses</a> /
+	  <a href="#teaching">Teaching</a> /
+	  <a href="#code">Code</a> /
+	  <a href="#papers">Papers</a> /
+	  <!-- <a href="#talks">Talks</a> / -->
 	  <a href="#experience">Experience</a>
 	</section>
 
 	<section class="bio">
 	  <div class="mugshot-and-contact">
 		<div class="mugshot">
-		  <img alt="Sam Potter" src="me.png" style="width:250px;height:auto;">
+		  <img alt="Sam Potter" src="me.png" style="width:300px;height:auto;">
 		</div>
 
 		<div class="contact">
@@ -47,30 +48,65 @@
 
 	  <div class="about-me">
 		<h1 id="about-me" class="basic">About me</h1>
-		<p>I&#8217;m a Courant Instructor at NYU&#8217;s <a href="https://cims.nyu.edu">Courant Institute of Mathematical Sciences</a>.</p>
+		<p>I&#8217;m a Courant Instructor at NYU&#8217;s <a href="https://cims.nyu.edu">Courant Institute of Mathematical Sciences</a> working with <a href="https://cims.nyu.edu/~oneil/">Mike O&apos;Neil</a> and <a href="https://math.nyu.edu/~greengar/">Leslie Greengard</a>.</p>
 		<p>I obtained my PhD from the University of Maryland&#8217;s <a href="https://cs.umd.edu">Department of Computer Science</a>, where I was advised by <a href="https://www.math.umd.edu/~mariakc/index.html">Masha Cameron</a> and <a href="https://www.cs.umd.edu/people/rduraisw">Ramani Duraiswami</a>. Before that, I received an MS in electrical engineering, also from the University of Maryland; and earlier still, a BS in mathematics from the University of Washington in my hometown of Seattle.</p>
 		<p>Broadly, my research is in computational science and engineering. In my dissertation, I introduced a new class of numerical algorithms for solving the eikonal equation, termed <i>jet marching methods</i>. These solvers were purpose built for problems in computational room acoustics, to which they were applied. I&#8217;ve also done work related to high-frequency wave propagation, stochastic differential equations, planetary science, signal processing, and data compression.</p>
 	  </div>
 	</section>
 
-	<section class="software">
-	  <h1 id="software" class="basic">Software</h1>
+	<section class="teaching">
+	  <h1 id="teaching" class="basic">Teaching</h1>
+	  <ul>
+		<li>NYU / Fall 2022 / Linear and Nonlinear Optimization / <a href="./courses/nyu-fall-2022-math-ua-253.html">link</a></li>
+		<li>NYU / Spring 2022 / Numerical Analysis / <a href="./courses/nyu-spring-2022-math-ua-252.html">link</a></li>
+		<li>NYU / Fall 2021 / Calculus 3 / <a href="./courses/nyu-fall-2021-math-ua-123.html">link</a></li>
+	  </ul>
+	</section>
+
+	<section class="code">
+	  <h1 id="code" class="basic">Code</h1>
 	  <ul>
 		<li><a href="https://github.com/sampotter/jmm">jmm</a> &#8275; C99 library with Python bindings implementing the jet marching method for solving the eikonal equation.</li>
 		<li><a href="https://github.com/sampotter/nufft">nufft</a> &#8275; 1D nonuniform fast Fourier transform (FFT), based on the fast multipole method for the Hilbert kernel and written in C++.</li>
-		<li><a href="https://github.com/sampotter/olim">olim</a> &#8275; C++ implementation of the ordered line integral method for the eikonal equation in 2D and 3D.</li>
+		<li><a href="https://github.com/sampotter/olim/tree/develop">olim</a> &#8275; C++ implementation of the ordered line integral method for the eikonal equation in 2D and 3D.</li>
 		<li><a href="https://github.com/sampotter/python-embree">python-embree</a> &#8275; a thin Embree 3 wrapper featuring easy interop with numpy and consistency with the Embree C API.</li>
 		<li><a href="https://github.com/sampotter/python-flux">python-flux</a> &#8275; a fast boundary element method for thermal and illumination modeling in planetary science.</li>
 	  </ul>
 	</section>
 
-	<section class="pubs">
-	  <h1 id="publications" class="basic">Publications</h1>
+	<section class="papers">
+	  <h1 id="papers" class="basic">Papers</h1>
+
+	  <!-- Fast hierarchical low-rank view factor matrices for thermal
+	  irradiance on planetary surfaces -->
+	  <figure class="paper">
+		<img class="paper-thumb" src="thumbnails/flux.png">
+		<figcaption class="paper-info">
+		  <div><em>Samuel F Potter</em>, Stefano Bertone, Norbert Sch&#246;rghofer, Erwan Mazarico</div>
+		  <div><strong>Fast hierarchical low-rank view factor matrices for thermal irradiance on planetary surfaces</strong></div>
+		  <div><em>Submitted</em> / 2022</div>
+		  <!-- <a href="https://arxiv.org/abs/2208.13002">arXiv</a> / -->
+		  <a href="https://github.com/sampotter/python-flux">code</a>
+		</figcaption>
+	  </figure>
+
+	  <!-- Numerical geometric acoustics: an eikonal-based approach
+	  for modeling sound propagation in 3D environments -->
+	  <figure class="paper">
+		<img class="paper-thumb" src="thumbnails/jmm3d.png">
+		<figcaption class="paper-info">
+		  <div><em>Samuel F Potter</em>, Maria K Cameron, Ramani Duraiswami</div>
+		  <div><strong>Numerical geometric acoustics: an eikonal-based approach for modeling sound propagation in 3D environments</strong></div>
+		  <div><em>Submitted</em> / 2022</div>
+		  <a href="https://arxiv.org/abs/2208.13002">arXiv</a> /
+		  <a href="https://github.com/sampotter/jmm">code</a>
+		</figcaption>
+	  </figure>
 
 	  <!-- Jet marching methods for solving the eikonal equation -->
-	  <figure class="pub">
-		<img class="pub-thumb" src="thumbnails/jmm2d.png">
-		<figcaption class="pub-info">
+	  <figure class="paper">
+		<img class="paper-thumb" src="thumbnails/jmm2d.png">
+		<figcaption class="paper-info">
 		  <div><em>Samuel F Potter</em>, Maria K Cameron</div>
 		  <div><strong>Jet marching methods for solving the eikonal equation</strong></div>
 		  <div>Journal on Scientific Computing / SIAM / 2021</div>
@@ -81,22 +117,22 @@
 	  </figure>
 
 	  <!-- Ordered line integral methods for solving the eikonal equation -->
-	  <figure class="pub">
-		<img class="pub-thumb" src="thumbnails/olim.png">
-		<figcaption class="pub-info">
+	  <figure class="paper">
+		<img class="paper-thumb" src="thumbnails/olim.png">
+		<figcaption class="paper-info">
 		  <div><em>Samuel F Potter</em>, Maria K Cameron</div>
 		  <div><strong>Ordered line integral methods for solving the eikonal equation</strong></div>
 		  <div>Journal of Scientific Computing / Springer / 2019</div>
 		  <a href="https://link.springer.com/article/10.1007/s10915-019-01077-z">JOMP</a> /
 		  <a href="https://arxiv.org/abs/1902.06825">arXiv</a> /
-		  <a href="https://github.com/sampotter/olim">code</a>
+		  <a href="https://github.com/sampotter/olim/tree/develop">code</a>
 		</figcaption>
 	  </figure>
 
 	  <!-- Computing the quasipotential for nongradient SDEs in 3D -->
-	  <figure class="pub">
-		<img class="pub-thumb" src="thumbnails/qpot3d.png">
-		<figcaption class="pub-info">
+	  <figure class="paper">
+		<img class="paper-thumb" src="thumbnails/qpot3d.png">
+		<figcaption class="paper-info">
 		  <div>Shuo Yang, <em>Samuel F Potter</em>, Maria K Cameron</div>
 		  <div><strong>Computing the quasipotential for nongradient SDEs in 3D</strong></div>
 		  <div>Journal of Computational Physics / Elsevier / 2019</div>
@@ -107,9 +143,9 @@
 	  </figure>
 
 	  <!-- Fast interpolation of bandlimited functions -->
-	  <figure class="pub">
-		<img class="pub-thumb" src="thumbnails/icassp2017.png">
-		<figcaption class="pub-info">
+	  <figure class="paper">
+		<img class="paper-thumb" src="thumbnails/icassp2017.png">
+		<figcaption class="paper-info">
 		  <div><em>Samuel F Potter</em>, Nail A Gumerov, Ramani Duraiswami</div>
 		  <div><strong>Fast interpolation of bandlimited functions</strong></div>
 		  <div>ICASSP / IEEE / 2017</div>
@@ -119,14 +155,12 @@
 	  </figure>
 	</section>
 
-	<section class="courses">
-	  <h1 id="courses" class="basic">Courses</h1>
-
-	  <ul>
-		<li>NYU / Spring 2022 / Numerical Analysis / <a href="./courses/nyu-spring-2022-math-ua-252.html">link</a>
-		<li>NYU / Fall 2021 / Calculus 3 / <a href="./courses/nyu-fall-2021-math-ua-123.html">link</a>
-	  </ul>
-	</section>
+	<!-- <section class="talks"> -->
+	<!--   <h1 id="talks" class="basic">Talks</h1> -->
+	<!--   <ul> -->
+	<!-- 	<li><strong>Fast algorithm for terrain irradiance using compressed view factor matrices</strong> / <a href="https://www.cmg2022.org">CMG 2022</a> / <a href="slides/cmg2022.pdf">slides</a></li> -->
+	<!--   </ul> -->
+	<!-- </section> -->
 
 	<section class="experience">
 	  <h1 id="experience" class="basic">Experience</h1>

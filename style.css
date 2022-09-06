@@ -2,10 +2,11 @@ body {
 	font-family: source-serif-4, serif;
 	font-weight: 400;
 	font-style: normal;
+	font-size: 1.25em;
 }
 
 ul {
-	list-style-type:'\27ab';
+	list-style-type:'⁃';
 	padding:1rem;
 	margin:0rem;
 }
@@ -36,6 +37,37 @@ section.bio {
 	flex-direction:column;
 }
 
+section.course-overview {
+	display:flex;
+	flex-direction:column;
+}
+
+th {
+	text-align:left;
+	padding-right:1rem;
+}
+
+td {
+	padding:0.1rem;
+	padding-right:1rem;
+}
+
+td.label {
+	font-weight:bold;
+}
+
+table {
+	padding-bottom:1rem;
+}
+
+table.course-table {
+	margin:1rem;
+}
+
+div.course-section {
+	padding:1rem;
+}
+
 @media (min-width: 1200px) {
 	section.bio {
 		flex-direction:row;
@@ -55,23 +87,32 @@ div.contact-line {
 	padding-bottom:0.25rem;
 }
 
+div.info-line {
+	white-space:nowrap;
+	padding-bottom:0.25rem;
+}
+
 div.about-me {
 	padding:1rem;
 }
 
-section.software {
+section.code {
 	padding:1rem;
 }
 
-section.pubs {
+section.papers {
 	padding:1rem;
 }
 
-section.courses {
+section.teaching {
 	padding:1rem;
 }
 
-figure.pub {
+section.talks {
+	padding:1rem;
+}
+
+figure.paper {
 	display: flex;
 	align-items: center;
 	margin:0rem;
@@ -79,11 +120,11 @@ figure.pub {
 	padding-bottom:1rem;
 }
 
-img.pub-thumb {
-	width:13.5%;
+img.paper-thumb {
+	width:10%;
 }
 
-figcaption.pub-info {
+figcaption.paper-info {
 	padding-left:1rem;
 }
 

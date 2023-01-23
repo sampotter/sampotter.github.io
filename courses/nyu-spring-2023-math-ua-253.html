@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-23 Mon 14:47 -->
+<!-- 2023-01-23 Mon 14:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MATH-UA 252 : Numerical Analysis</title>
@@ -201,8 +201,8 @@
 <span class="subtitle">NYU Courant, Spring 2023</span>
 </h1>
 
-<div id="outline-container-org99a8975" class="outline-2">
-<h2 id="org99a8975"><span class="section-number-2">1.</span> Logistics</h2>
+<div id="outline-container-org44a2cb3" class="outline-2">
+<h2 id="org44a2cb3"><span class="section-number-2">1.</span> Logistics</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -215,7 +215,7 @@
 <tbody>
 <tr>
 <td class="org-left">Instructor</td>
-<td class="org-left">Samuel F. Potter (WWH 1104)</td>
+<td class="org-left"><a href="https://sampotter.github.io">Samuel F. Potter</a> (WWH 1104)</td>
 </tr>
 
 <tr>
@@ -224,15 +224,25 @@
 </tr>
 
 <tr>
+<td class="org-left">Lecture</td>
+<td class="org-left">Tu/Th 9:30-10:45 AM CIWW 201</td>
+</tr>
+
+<tr>
+<td class="org-left">Recitation</td>
+<td class="org-left">Fri 11:00-12:15PM 194M 307</td>
+</tr>
+
+<tr>
 <td class="org-left">Office Hours</td>
-<td class="org-left">Sam: Thursday</td>
+<td class="org-left">TBD</td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<div id="outline-container-org15e5f09" class="outline-3">
-<h3 id="org15e5f09"><span class="section-number-3">1.1.</span> Prerequisites</h3>
+<div id="outline-container-org6d5eb84" class="outline-3">
+<h3 id="org6d5eb84"><span class="section-number-3">1.1.</span> Prerequisites</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Calculus III and Linear Algebra. Programming is not officially a
@@ -245,8 +255,8 @@ real analysis.
 </div>
 </div>
 
-<div id="outline-container-org6ef1066" class="outline-3">
-<h3 id="org6ef1066"><span class="section-number-3">1.2.</span> Course Overview</h3>
+<div id="outline-container-org10e870c" class="outline-3">
+<h3 id="org10e870c"><span class="section-number-3">1.2.</span> Course Overview</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 After a short introduction, the first half of the class will
@@ -259,9 +269,22 @@ exposed to more applications.
 </div>
 </div>
 
-<div id="outline-container-org07af825" class="outline-3">
-<h3 id="org07af825"><span class="section-number-3">1.3.</span> Attendance</h3>
+<div id="outline-container-org80d190b" class="outline-3">
+<h3 id="org80d190b"><span class="section-number-3">1.3.</span> Logistics</h3>
 <div class="outline-text-3" id="text-1-3">
+<p>
+There is a course <a href="https://brightspace.nyu.edu/d2l/home/265737">BrightSpace</a>. This is where you will submit your
+homework and receive your grades. I will also use BrightSpace to send
+announcements. It is your responsibility to read these announcements
+carefully. If you don't, you could easily overlook an important change
+in the course.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4dfa2e5" class="outline-3">
+<h3 id="org4dfa2e5"><span class="section-number-3">1.4.</span> Attendance</h3>
+<div class="outline-text-3" id="text-1-4">
 <p>
 Attendance is not mandatory.  You do not need to ask for my permission
 to miss class. To prevent losing points because of a lack of
@@ -272,9 +295,9 @@ case you would need a doctor's note.
 </div>
 </div>
 
-<div id="outline-container-org0ed054e" class="outline-3">
-<h3 id="org0ed054e"><span class="section-number-3">1.4.</span> COVID-19</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org3c935e9" class="outline-3">
+<h3 id="org3c935e9"><span class="section-number-3">1.5.</span> COVID-19</h3>
+<div class="outline-text-3" id="text-1-5">
 <p>
 It is your responsibility to be aware of NYU's current policies
 regarding COVID-19. Do not ask me to explain them to you. Do not send
@@ -289,17 +312,24 @@ later than one day after the exam in question.
 </div>
 </div>
 
-<div id="outline-container-org9b04626" class="outline-3">
-<h3 id="org9b04626"><span class="section-number-3">1.5.</span> Course materials</h3>
-<div class="outline-text-3" id="text-1-5">
+<div id="outline-container-org5012ee7" class="outline-3">
+<h3 id="org5012ee7"><span class="section-number-3">1.6.</span> Course materials</h3>
+<div class="outline-text-3" id="text-1-6">
 <p>
 Unfortunately, there isn't a single textbook which covers the same
 topics in the same order as what I would like to present in class. I
 will provide references to sections from textbooks ahead of time which
-are you are free to read. None of these textbooks are perfect. I've
-selected them primarily because they are available for free online
-through NYU's library. The textbooks I will use (along with links to
-where you can download them) are:
+are you are free to read. It is not a requirement to do these
+readings, but obviously if you do them you will understand the
+material much better. These textbooks are also a good source of
+practice problems.
+</p>
+
+<p>
+None of these textbooks are perfect. I've selected them primarily
+because they're available for free online through NYU's library. The
+textbooks I will use (along with links to where you can download them)
+are:
 </p>
 
 <ul class="org-ul">
@@ -309,7 +339,7 @@ where you can download them) are:
 </ul>
 
 <p>
-The material that we'll cover in this course is classical. <b>Many</b> books
+The material covered in this course is classical. <b>Many</b> books
 have been written about every topic you'll encounter during the
 semester. If these books don't do it for you, there's nothing
 stopping you from finding another book which you find a bit easier to
@@ -330,9 +360,21 @@ with the relevant sections in these books.
 </div>
 </div>
 
-<div id="outline-container-org415d935" class="outline-3">
-<h3 id="org415d935"><span class="section-number-3">1.6.</span> Homework</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-org96a240f" class="outline-3">
+<h3 id="org96a240f"><span class="section-number-3">1.7.</span> Recitation</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+There is a weekly recitation, led by the TA. Attendance is not
+mandatory, but the recitation will be a good source of practice for
+the course. Materials related to the recitation may be posted online
+at the TA's discretion.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b5eced" class="outline-3">
+<h3 id="org6b5eced"><span class="section-number-3">1.8.</span> Homework</h3>
+<div class="outline-text-3" id="text-1-8">
 <p>
 There will be 10 homeworks assigned throughout the semester. The first
 five will be due before the midterm, while the remaining five will be
@@ -344,9 +386,9 @@ solutions will not be posted.
 </div>
 </div>
 
-<div id="outline-container-orgeb669dd" class="outline-3">
-<h3 id="orgeb669dd"><span class="section-number-3">1.7.</span> Quizzes</h3>
-<div class="outline-text-3" id="text-1-7">
+<div id="outline-container-org3a204b7" class="outline-3">
+<h3 id="org3a204b7"><span class="section-number-3">1.9.</span> Quizzes</h3>
+<div class="outline-text-3" id="text-1-9">
 <p>
 There will be 10 quizzes throughout the semester. Like the homework,
 there will be five before the first semester and five after. Quizzes
@@ -355,9 +397,9 @@ and quiz solutions will not be posted.
 </div>
 </div>
 
-<div id="outline-container-orgbb57c94" class="outline-3">
-<h3 id="orgbb57c94"><span class="section-number-3">1.8.</span> Exams</h3>
-<div class="outline-text-3" id="text-1-8">
+<div id="outline-container-org88c0e58" class="outline-3">
+<h3 id="org88c0e58"><span class="section-number-3">1.10.</span> Exams</h3>
+<div class="outline-text-3" id="text-1-10">
 <p>
 There will be a midterm and a final. For each exam, we will have a
 review session beforehand. Exams and exam solutions will not be
@@ -366,9 +408,9 @@ posted.
 </div>
 </div>
 
-<div id="outline-container-org787a440" class="outline-3">
-<h3 id="org787a440"><span class="section-number-3">1.9.</span> Grading</h3>
-<div class="outline-text-3" id="text-1-9">
+<div id="outline-container-org382045e" class="outline-3">
+<h3 id="org382045e"><span class="section-number-3">1.11.</span> Grading</h3>
+<div class="outline-text-3" id="text-1-11">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -415,9 +457,9 @@ posted.
 </div>
 </div>
 
-<div id="outline-container-org499b48c" class="outline-3">
-<h3 id="org499b48c"><span class="section-number-3">1.10.</span> A few words about course logistics</h3>
-<div class="outline-text-3" id="text-1-10">
+<div id="outline-container-org7c170d6" class="outline-3">
+<h3 id="org7c170d6"><span class="section-number-3">1.12.</span> A few words about course logistics</h3>
+<div class="outline-text-3" id="text-1-12">
 <p>
 Solutions to homeworks, quizzes, and exams will not be posted, because
 it is your responsibility to investigate your errors. Simply reading
@@ -431,8 +473,8 @@ people want help, I may go over some solutions in class.
 </div>
 </div>
 
-<div id="outline-container-org0349e9c" class="outline-2">
-<h2 id="org0349e9c"><span class="section-number-2">2.</span> Schedule</h2>
+<div id="outline-container-orga8926ae" class="outline-2">
+<h2 id="orga8926ae"><span class="section-number-2">2.</span> Schedule</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 (Note: for the references "SM" refers to Suli and Mayers, "S" refers

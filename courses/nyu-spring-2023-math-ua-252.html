@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-01-23 Mon 15:03 -->
+<!-- 2023-01-30 Mon 20:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MATH-UA 252 : Numerical Analysis</title>
@@ -201,8 +201,8 @@
 <span class="subtitle">NYU Courant, Spring 2023</span>
 </h1>
 
-<div id="outline-container-org36b1312" class="outline-2">
-<h2 id="org36b1312"><span class="section-number-2">1.</span> Logistics</h2>
+<div id="outline-container-org2a14a9d" class="outline-2">
+<h2 id="org2a14a9d"><span class="section-number-2">1.</span> Logistics</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -239,15 +239,20 @@
 </tr>
 
 <tr>
-<td class="org-left">Office Hours</td>
-<td class="org-left">TBD</td>
+<td class="org-left">Mariana's Office Hours</td>
+<td class="org-left">Wed 3:30-4:30 PM WWH 412</td>
+</tr>
+
+<tr>
+<td class="org-left">Sam's Office Hours</td>
+<td class="org-left">By appointment</td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<div id="outline-container-org5ed73bf" class="outline-3">
-<h3 id="org5ed73bf"><span class="section-number-3">1.1.</span> Prerequisites</h3>
+<div id="outline-container-org30b4741" class="outline-3">
+<h3 id="org30b4741"><span class="section-number-3">1.1.</span> Prerequisites</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Calculus III and Linear Algebra. Programming is not officially a
@@ -260,13 +265,13 @@ real analysis.
 </div>
 </div>
 
-<div id="outline-container-org1bc9b53" class="outline-3">
-<h3 id="org1bc9b53"><span class="section-number-3">1.2.</span> Course Overview</h3>
+<div id="outline-container-org5388cd0" class="outline-3">
+<h3 id="org5388cd0"><span class="section-number-3">1.2.</span> Course Overview</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 After a short introduction, the first half of the class will
 essentially be an introduction to numerical linear algebra, while the
-second half of the class will cover topics classical topics in
+second half of the class will cover classical topics in
 approximation theory and the solution of ODEs. In lectures, we will
 cover theory and algorithms; in the homework assignments, you will be
 exposed to more applications.
@@ -274,8 +279,8 @@ exposed to more applications.
 </div>
 </div>
 
-<div id="outline-container-org4486d30" class="outline-3">
-<h3 id="org4486d30"><span class="section-number-3">1.3.</span> Logistics</h3>
+<div id="outline-container-org852a85d" class="outline-3">
+<h3 id="org852a85d"><span class="section-number-3">1.3.</span> Logistics</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 There is a course <a href="https://brightspace.nyu.edu/d2l/home/265737">BrightSpace</a>. This is where you will submit your
@@ -287,8 +292,8 @@ in the course.
 </div>
 </div>
 
-<div id="outline-container-orgd47b7c1" class="outline-3">
-<h3 id="orgd47b7c1"><span class="section-number-3">1.4.</span> Attendance</h3>
+<div id="outline-container-orgd3c24ce" class="outline-3">
+<h3 id="orgd3c24ce"><span class="section-number-3">1.4.</span> Attendance</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Attendance is not mandatory.  You do not need to ask for my permission
@@ -300,8 +305,8 @@ case you would need a doctor's note.
 </div>
 </div>
 
-<div id="outline-container-orgadd57b4" class="outline-3">
-<h3 id="orgadd57b4"><span class="section-number-3">1.5.</span> COVID-19</h3>
+<div id="outline-container-org56dc7c4" class="outline-3">
+<h3 id="org56dc7c4"><span class="section-number-3">1.5.</span> COVID-19</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 It is your responsibility to be aware of NYU's current policies
@@ -317,8 +322,8 @@ later than one day after the exam in question.
 </div>
 </div>
 
-<div id="outline-container-org1b7dc0e" class="outline-3">
-<h3 id="org1b7dc0e"><span class="section-number-3">1.6.</span> Course materials</h3>
+<div id="outline-container-org65e3efa" class="outline-3">
+<h3 id="org65e3efa"><span class="section-number-3">1.6.</span> Course materials</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 Unfortunately, there isn't a single textbook which covers the same
@@ -365,8 +370,8 @@ with the relevant sections in these books.
 </div>
 </div>
 
-<div id="outline-container-org3e85acf" class="outline-3">
-<h3 id="org3e85acf"><span class="section-number-3">1.7.</span> Recitation</h3>
+<div id="outline-container-org73721ff" class="outline-3">
+<h3 id="org73721ff"><span class="section-number-3">1.7.</span> Recitation</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 There is a weekly recitation, led by the TA. Attendance is not
@@ -377,8 +382,8 @@ at the TA's discretion.
 </div>
 </div>
 
-<div id="outline-container-orga828af1" class="outline-3">
-<h3 id="orga828af1"><span class="section-number-3">1.8.</span> Homework</h3>
+<div id="outline-container-org98962fe" class="outline-3">
+<h3 id="org98962fe"><span class="section-number-3">1.8.</span> Homework</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 There will be 10 homeworks assigned throughout the semester. The first
@@ -391,8 +396,8 @@ solutions will not be posted.
 </div>
 </div>
 
-<div id="outline-container-orga318cba" class="outline-3">
-<h3 id="orga318cba"><span class="section-number-3">1.9.</span> Quizzes</h3>
+<div id="outline-container-orgde93f8d" class="outline-3">
+<h3 id="orgde93f8d"><span class="section-number-3">1.9.</span> Quizzes</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 There will be 10 quizzes throughout the semester. Like the homework,
@@ -402,8 +407,8 @@ and quiz solutions will not be posted.
 </div>
 </div>
 
-<div id="outline-container-orgc966dba" class="outline-3">
-<h3 id="orgc966dba"><span class="section-number-3">1.10.</span> Exams</h3>
+<div id="outline-container-org231c4a6" class="outline-3">
+<h3 id="org231c4a6"><span class="section-number-3">1.10.</span> Exams</h3>
 <div class="outline-text-3" id="text-1-10">
 <p>
 There will be a midterm and a final. For each exam, we will have a
@@ -413,8 +418,8 @@ posted.
 </div>
 </div>
 
-<div id="outline-container-org74e9aa8" class="outline-3">
-<h3 id="org74e9aa8"><span class="section-number-3">1.11.</span> Grading</h3>
+<div id="outline-container-orgcf587c5" class="outline-3">
+<h3 id="orgcf587c5"><span class="section-number-3">1.11.</span> Grading</h3>
 <div class="outline-text-3" id="text-1-11">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -462,8 +467,8 @@ posted.
 </div>
 </div>
 
-<div id="outline-container-org671826a" class="outline-3">
-<h3 id="org671826a"><span class="section-number-3">1.12.</span> A few words about course logistics</h3>
+<div id="outline-container-orgbd2c2b8" class="outline-3">
+<h3 id="orgbd2c2b8"><span class="section-number-3">1.12.</span> A few words about course logistics</h3>
 <div class="outline-text-3" id="text-1-12">
 <p>
 Solutions to homeworks, quizzes, and exams will not be posted, because
@@ -478,8 +483,8 @@ people want help, I may go over some solutions in class.
 </div>
 </div>
 
-<div id="outline-container-org5956352" class="outline-2">
-<h2 id="org5956352"><span class="section-number-2">2.</span> Schedule</h2>
+<div id="outline-container-org8b17cc8" class="outline-2">
+<h2 id="org8b17cc8"><span class="section-number-2">2.</span> Schedule</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 (Note: for the references "SM" refers to Suli and Mayers, "S" refers
@@ -500,219 +505,219 @@ to Scott, and "GH" refers to Griffiths and Higham.)
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Week</th>
 <th scope="col" class="org-left">Date</th>
+<th scope="col" class="org-left">Week</th>
 <th scope="col" class="org-left">Topic</th>
 <th scope="col" class="org-left">References</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">#1</td>
 <td class="org-left">1/24</td>
+<td class="org-left">#1</td>
 <td class="org-left">Solving nonlinear equations</td>
 <td class="org-left">S: Ch 1&amp;2, SM: Ch 1</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">1/26</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Convergence of Newton's method</td>
 <td class="org-left">S: Ch 1&amp;2, SM: Ch 1</td>
 </tr>
 
 <tr>
-<td class="org-left">#2</td>
 <td class="org-left">1/31</td>
+<td class="org-left">#2</td>
 <td class="org-left">Floating point arithmetic</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">2/2</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Matrix norms, conditioning</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#3</td>
 <td class="org-left">2/7</td>
+<td class="org-left">#3</td>
 <td class="org-left">The LU factorization</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">2/9</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Pivoting</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#4</td>
 <td class="org-left">2/14</td>
+<td class="org-left">#4</td>
 <td class="org-left">Gram-Schmidt and QR</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">2/16</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Householder QR</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#5</td>
 <td class="org-left">2/21</td>
+<td class="org-left">#5</td>
 <td class="org-left">Eigenvalue algorithms - Part I</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">2/23</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Eigenvalue algorithms - Part II</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#6</td>
 <td class="org-left">2/28</td>
+<td class="org-left">#6</td>
 <td class="org-left">The SVD - Part I</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">3/2</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">The SVD - Part II</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#7</td>
 <td class="org-left">3/7</td>
+<td class="org-left">#7</td>
 <td class="org-left">Review</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">3/9</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Midterm #1</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">3/14</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left"><b>Spring break - no class</b></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">3/16</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left"><b>Spring break - no class</b></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#8</td>
 <td class="org-left">3/21</td>
+<td class="org-left">#8</td>
 <td class="org-left">Lagrange interpolation</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">3/23</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Hermite interpolation</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#9</td>
 <td class="org-left">3/28</td>
+<td class="org-left">#9</td>
 <td class="org-left">The Vandermonde matrix</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">3/30</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">The cardinal basis</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#10</td>
 <td class="org-left">4/4</td>
+<td class="org-left">#10</td>
 <td class="org-left">Orthogonal polynomials</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">4/6</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Chebyshev polynomials</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#11</td>
 <td class="org-left">4/11</td>
+<td class="org-left">#11</td>
 <td class="org-left">Newton-Cotes integration</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">4/13</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Gaussian quadrature</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#12</td>
 <td class="org-left">4/18</td>
+<td class="org-left">#12</td>
 <td class="org-left">ODEs: Euler's method, Richardson extrapolation</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">4/20</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">ODEs: local vs. global error, more methods</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#13</td>
 <td class="org-left">4/25</td>
+<td class="org-left">#13</td>
 <td class="org-left">ODEs: consistency, stability, and convergence</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">4/27</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">ODEs: A-stability</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">#14</td>
 <td class="org-left">5/2</td>
+<td class="org-left">#14</td>
 <td class="org-left">Trigonometric interpolation, the DFT</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">5/4</td>
+<td class="org-left">&#xa0;</td>
 <td class="org-left">Review</td>
 <td class="org-left">&#xa0;</td>
 </tr>

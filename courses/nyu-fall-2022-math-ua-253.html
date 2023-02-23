@@ -1,117 +1,738 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-02-23 Thu 09:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MATH-UA 252 : Numerical Analysis</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-	<meta name="description" content="Academic home page of Samuel F. Potter">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<link rel="stylesheet" href="../style.css">
-	<link rel="stylesheet" href="https://use.typekit.net/ami0bso.css">
-	<title>Sam Potter - MATH-UA 253</title>
-  </head>
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="syllabus.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MATH-UA 252 : Numerical Analysis
+<br />
+<span class="subtitle">NYU Courant, Spring 2023</span>
+</h1>
 
-  <body>
-	<section id="course-section">
-	  <div id="course-information">
-		<h1 class="basic">MATH-UA 253/MA-UY 3204 - Fall 2022 - Linear and nonlinear optimization</h1>
-		<p>
-		  <table>
-			<tr><th>CIMS</th><td>MATH-UA 253</td></tr>
-			<tr><th>Tandon</th><td>MA-UA 3204</td></tr>
-		  </table>
-		</p>
-	  </div>
-	  <div id="course-section">
-		<h1 class="basic">Personnel</h1>
-		<p>
-		  <table>
-			<tr><th>Intructor</th><td>Samuel F. Potter 👺</td></tr>
-			<tr><th>Website</th><td><a href="https://sampotter.github.io/">sampotter.github.io</a></td></tr>
-			<tr><th>Office</th><td>WWH 1104</td></tr>
-			<tr><th>Office</strong> hours</td><td>Tu 5:00-6:00PM CIWW 1011</td></tr>
-			<tr><th>Class</th><td>Tu/Th 3:30-4:45PM CIWW 1011</td></tr>
-		  </table>
-		  <table>
-			<tr><th>Teaching assistant</th><td>Mariana Martinez-Aguilar</td></tr>
-			<tr><th>Office hours</th><td>Wed 4:25-5:25PM WWH 505 </td></tr>
-			<tr><th>Recitation</th><td>Fri 3:30-4:45PM CIWW 1011 (starting 9/16)</td></tr>
-		  </table>
-		</p>
-	  </div>
-	  <div id="course-section">
-		<h1 class="basic">Links</h1>
-		<ul>
-		  <li><a href="nyu-fall-2022-math-ua-253/syllabus.pdf">Syllabus</a></li>
-		  <li><a href="https://brightspace.nyu.edu/d2l/home/228146">Brightspace</a></li>
-		  <li><a href="https://github.com/sampotter/math-ua-253-recitation-materials">Recitation materials</a></li>
-		</ul>
-	  </div>
-	  <div id="course-section">
-		<h1 class="basic">Homework</h1>
- 		<table>
-		  <tr><th>Assignment</th><th>Materials</th><th>Topic</th><th>Due date</th></tr>
-		  <tr><td>Homework #1</td><td><a href="nyu-fall-2022-math-ua-253/hw1.pdf">HW</a>, <a href="nyu-fall-2022-math-ua-253/hw1_rubric.pdf">Rubric</a>, <a href="nyu-fall-2022-math-ua-253/hw1sol.pdf">Solution</a><td>Matrix calculus - Gradient descent</td><td>9/19</td></tr>
-		  <tr><td>Homework #2</td><td><a href="nyu-fall-2022-math-ua-253/hw2.pdf">HW</a>, <a href="nyu-fall-2022-math-ua-253/hw2_rubric.pdf">Rubric</a>, <a href="nyu-fall-2022-math-ua-253/hw2sol_alexa.pdf">Solution</a> (courtesy Alexa Tartaglini)<td>Nonlinear least squares - Gauss-Newton</td><td>9/26</td></tr>
-		  <tr><td>Homework #3</td><td><a href="nyu-fall-2022-math-ua-253/hw3.pdf">HW</a>, <a href="nyu-fall-2022-math-ua-253/hw3rubric.pdf">Rubric</a>, <a href="nyu-fall-2022-math-ua-253/hw3sol.pdf">Solution</a><td>Projected gradient descent - Thomson problem</td><td>10/5</td></tr>
-		  <tr><td>Homework #4</td><td><a href="nyu-fall-2022-math-ua-253/hw4.pdf">HW</a>, <a href="nyu-fall-2022-math-ua-253/hw4rubric.pdf">Rubric</a>, <a href="nyu-fall-2022-math-ua-253/hw4sol.pdf">Solution</a>, <a href="nyu-fall-2022-math-ua-253/hw4prob7.pdf">Problem 7</a></td><td>Linear algebra - Convexity</td><td>10/12</td></tr>
-		  <tr><td>Homework #5</td><td><a href="nyu-fall-2022-math-ua-253/hw5.pdf">HW</a>, <a href="nyu-fall-2022-math-ua-253/hw5rubric.pdf">Rubric</a>, <a href="nyu-fall-2022-math-ua-253/hw5sol1.pdf">#1</a>, <a href="nyu-fall-2022-math-ua-253/hw5sol2.pdf">#2</a> (courtesy Alexa Tartaglini), <a href="nyu-fall-2022-math-ua-253/hw5sol3.pdf">#3</a> (courtesy Hongyi Zheng)</td><td>Quasi-Newton methods - Lennard-Jones potential - Fermat's principle</td><td>10/19</td></tr>
-		  <tr><td>Homework #6</td><td><a href="nyu-fall-2022-math-ua-253/hw6.pdf">HW</a>, <a href="nyu-fall-2022-math-ua-253/hw6rubric.pdf">Rubric</a>, <a href="nyu-fall-2022-math-ua-253/hw6sol1.pdf">#1</a> (courtesy Alexa Taraglini), <a href="nyu-fall-2022-math-ua-253/hw6sol.pdf">Rest</a></td><td>Geometry of LPs - Convex polyhedra</td><td>11/13</td></tr>
-		  <tr><td>Homework #7</td><td><a href="nyu-fall-2022-math-ua-253/hw7.pdf">HW</a>, <a href="nyu-fall-2022-math-ua-253/nile.csv">nile.csv</a></td><td>Modeling with LPs - Basis pursuit</td><td>11/23</td></tr>
-		  <tr><td>Homework #8</td><td><a href="nyu-fall-2022-math-ua-253/hw8.pdf">HW</a></td><td>Equality-constrained quadratic programs</td><td>12/9</td></tr>
-		  <tr><td>Homework #9 (Bonus)</td><td><a href="nyu-fall-2022-math-ua-253/hw9.pdf">HW</a></td><td>QPs with linear inequality constraints - SVM</td><td>12/16</td></tr>
-		</table>
-	  </div>
-	  <div id="course-section">
-		<h1 class="basic">Quizzes and worksheets</h1>
-		<ul>
-		  <li><a href="nyu-fall-2022-math-ua-253/worksheet1.pdf">Worksheet #1</a>, <a href="nyu-fall-2022-math-ua-253/quiz1sol.pdf">Quiz #1 solution</a></li>
-		  <li><a href="nyu-fall-2022-math-ua-253/worksheet2.pdf">Worksheet #2</a>, <a href="nyu-fall-2022-math-ua-253/quiz2sol.pdf">Quiz #2 solution</a></li>
-		  <li><a href="nyu-fall-2022-math-ua-253/worksheet3.pdf">Worksheet #3</a>, <a href="nyu-fall-2022-math-ua-253/quiz3sol.pdf">Quiz #3 solution</a></li>
-		  <li><a href="nyu-fall-2022-math-ua-253/worksheet4.pdf">Worksheet #4</a></li>
-		  <li><a href="nyu-fall-2022-math-ua-253/worksheet5.pdf">Worksheet #5</a></li>
-		</ul>
-	  </div>
-	  <div id="course-section">
-		<h1 class="basic">Exams</h1>
-		<ul>
-		  <li><a href="nyu-fall-2022-math-ua-253/midterm.pdf">Midterm</a> (<a href="nyu-fall-2022-math-ua-253/midterm_solution.pdf">Solution</a>)</li>
-		</ul>
-	  <div id="course-section">
-		<h1 class="basic">Schedule</h1>
-		<table>
-		  <tr><th>Date</th><th>Section</th><th>Topics</th><th>Materials</th><th>References</th></tr>
-		  <tr><td>9/1</td><td>Course intro</td><td>What is optimization? - Simple LPs</td><td><a href="nyu-fall-2022-math-ua-253/sep1.pdf">Notes</a></td><td>Griva 1.1-4</td></tr>
-		  <tr><td>9/6</td><td>Course intro</td><td>Linear least squares - Review </td><td><a href="nyu-fall-2022-math-ua-253/sep6.pdf">Notes</a></td><td>Griva 1.5</td></tr>
-		  <tr><td>9/8</td><td>Course intro</td><td>Review of multivariable calculus</td><td><a href="nyu-fall-2022-math-ua-253/sep8.pdf">Notes</a></td><td>Griva Appendix B</td></tr>
-		  <tr><td>9/13</td><td>Unconstrained optimization</td><td>Nonlinear least squares</td><td><a href="nyu-fall-2022-math-ua-253/sep13.pdf">Notes</a></td><td>Griva 1.5</td></tr>
-		  <tr><td>9/15</td><td>Unconstrained optimization</td><td>Newton's method intro - Gauss-Newton</td><td><a href="nyu-fall-2022-math-ua-253/sep15.pdf">Notes</a></td><td>Griva 11.3, Griva 2.7</td></tr>
-		  <tr><td>9/20</td><td>Unconstrained optimization</td><td>Gradient descent</td><td><a href="nyu-fall-2022-math-ua-253/sep20.pdf">Notes</a></td><td>Strang VI.4, Griva 12.2</td></tr>
-		  <tr><td>9/22</td><td>Unconstrained optimization</td><td>Behavior of gradient descent</td><td><a href="nyu-fall-2022-math-ua-253/sep22.pdf">Notes</a>, <a href="https://github.com/sampotter/math-ua-253-demos/blob/main/sep22.ipynb">Demo</a></td><td>Strang VI.4, Griva 12.2</td></tr>
-		  <tr><td>9/27</td><td>Unconstrained optimization</td><td>Optimality - Convexity</td><td><a href="nyu-fall-2022-math-ua-253/sep27.pdf">Notes</a></td><td>Griva 11.2, 2.3</td></tr>
-		  <tr><td>9/29</td><td>Unconstrained optimization</td><td>Newton's method revisited</td><td><a href="nyu-fall-2022-math-ua-253/sep29.pdf">Notes</a></td><td>Griva 11.3, 11.4, Appendix A</td></tr>
-		  <tr><td>10/4</td><td>Unconstrained optimization</td><td>Line search methods</td><td><a href="nyu-fall-2022-math-ua-253/oct4.pdf">Notes</a></td><td>Griva 11.5</td></tr>
-		  <tr><td>10/6</td><td>Unconstrained optimization</td><td>Quasi-Newton methods</td><td><a href="nyu-fall-2022-math-ua-253/oct6.pdf">Notes</a></td><td>Griva 12.3, Nocedal & Wright 11.1</td></tr>
-		  <tr><td>10/11</td><td><em>No class</em></td></tr>
-		  <tr><td>10/13</td><td>Unconstrained optimization</td><td>More Quasi-Newton</td><td><a href="nyu-fall-2022-math-ua-253/oct13.pdf">Notes</a></td><td>Griva 12.3, Nocedal & Wright 11.1</td></tr>
-		  <tr><td>10/18</td><td>Unconstrained optimization</td><td>"</td><td><a href="nyu-fall-2022-math-ua-253/oct13.pdf">"</a></td><td>"</td></tr>
-		  <tr><td>10/20</td><td><i>Midterm review</i></td></tr>
-		  <tr><td>10/25</td><td>Linear programming</td><td>Geometry of LPs</td><td><a href="nyu-fall-2022-math-ua-253/oct25.pdf">Notes</a></td><td>Griva 4.1-4</td></tr>
-		  <tr><td>10/27</td><td>Linear programming</td><td>Standard form on an LP</td><td><a href="nyu-fall-2022-math-ua-253/oct27.pdf">Notes</a></td><td>Griva 4.1-4</td></tr>
-		  <tr><td>11/1</td><td><i>No class</i></td></tr>
-		  <tr><td>11/3</td><td>Linear programming</td><td>Extreme points and basic solutions</td><td><a href="nyu-fall-2022-math-ua-253/nov3.pdf">Notes</a></td><td>Griva 4.1-4</td></tr>
-		  <tr><td>11/8</td><td>Constrained optimization</td><td>Intro to KKT conditions</td><td><a href="nyu-fall-2022-math-ua-253/nov8.pdf">Notes</a></td><td><a href="https://www-cs.stanford.edu/people/davidknowles/lagrangian_duality.pdf">Lagrangian Duality for Dummies</a></td></tr>
-		  <tr><td>11/10</td><td>Constrained optimization</td><td>More KKT</td><td><a href="nyu-fall-2022-math-ua-253/nov10.pdf">Notes</a></td><td>Nocedal & Wright 13.1</td></tr>
-		  <tr><td>11/15</td><td>Linear programming</td><td>The dual LP</td><td><a href="nyu-fall-2022-math-ua-253/nov15.pdf">Notes</a></td><td>Nocedal & Wright 13.1</td></tr>
-		  <tr><td>11/17</td><td>Linear Programming</td><td>Interior point methods for LPs</td><td><a href="nyu-fall-2022-math-ua-253/nov17.pdf">Notes</a></td><td>Griva 10.1-2, Nocedal & Wright 14.1</tr>
-		  <tr><td>11/22</td><td>Constrained optimization</td><td>Lagrangian duality</td><td><a href="nyu-fall-2022-math-ua-253/nov22.pdf">Notes</a></td><td>Griva 14.8.1</td></tr>
-		  <tr><td>11/29</td><td>Constrained optimization</td><td>Linear equality constraints</td><td><a href="nyu-fall-2022-math-ua-253/nov29.pdf">Notes</a></td><td>Griva 14.1-3</td></tr>
-		  <tr><td>12/1</td><td>Constrained optimization</td><td>Linear inequality constraints</td><td><a href="nyu-fall-2022-math-ua-253/dec1.pdf">Notes</a></td><td>Griva 14.4</td></tr>
-		  <tr><td>12/6</td><td>Constrained optimization</td><td>Optimality conditions for nonlinear constraints</td><td><a href="nyu-fall-2022-math-ua-253/dec6.pdf">Notes</a></td></tr>
-		  <tr><td>12/8</td><td>Constrained optimization</td><td>Algorithms for nonlinear constrained problems</td><td><a href="nyu-fall-2022-math-ua-253/dec8.pdf">Notes</a></td></tr>
-		  <tr><td>12/13</td><td>Review</td><td></td><td><a href="nyu-fall-2022-math-ua-253/topics.pdf">Outline of topics</a></td></tr>
-		  <tr><td>12/16</td><td>Final exam</td><td>(4:00-5:50PM - <i>see Albert for details</i>)</td><td></td></tr>
-	  </div>
-	</section>
-  </body>
+<div id="outline-container-orgfa44f07" class="outline-2">
+<h2 id="orgfa44f07"><span class="section-number-2">1.</span> Logistics</h2>
+<div class="outline-text-2" id="text-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Instructor</td>
+<td class="org-left"><a href="https://sampotter.github.io">Samuel F. Potter</a> (WWH 1104)</td>
+</tr>
+
+<tr>
+<td class="org-left">Teaching Assistant</td>
+<td class="org-left">Mariana Martinez-Aguilar</td>
+</tr>
+
+<tr>
+<td class="org-left">Lecture</td>
+<td class="org-left">Tu/Th 9:30-10:45 AM CIWW 201</td>
+</tr>
+
+<tr>
+<td class="org-left">Recitation</td>
+<td class="org-left">Fri 11:00-12:15PM 194M 307</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">(Note: first recitation is on <b>2/3</b>)</td>
+</tr>
+
+<tr>
+<td class="org-left">Mariana's Office Hours</td>
+<td class="org-left">Wed 3:30-4:30 PM WWH 412</td>
+</tr>
+
+<tr>
+<td class="org-left">Sam's Office Hours</td>
+<td class="org-left">By appointment, or</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Thursdays after class</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orga78b7d1" class="outline-3">
+<h3 id="orga78b7d1"><span class="section-number-3">1.1.</span> Prerequisites</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Calculus III and Linear Algebra. Programming is not officially a
+requirement for the class, but you can expect the course to be
+challenging if you have never programmed before. Likewise, if you have
+never seen or done a mathematical proof, you might have a turbulent
+time, even though the course is not as proof heavy as a class like
+real analysis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9fe54c9" class="outline-3">
+<h3 id="org9fe54c9"><span class="section-number-3">1.2.</span> Course Overview</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+After a short introduction, the first half of the class will
+essentially be an introduction to numerical linear algebra, while the
+second half of the class will cover classical topics in
+approximation theory and the solution of ODEs. In lectures, we will
+cover theory and algorithms; in the homework assignments, you will be
+exposed to more applications.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4686ed1" class="outline-3">
+<h3 id="org4686ed1"><span class="section-number-3">1.3.</span> Logistics</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+There is a course <a href="https://brightspace.nyu.edu/d2l/home/265737">BrightSpace</a>. This is where you will submit your
+homework and receive your grades. I will also use BrightSpace to send
+announcements. It is your responsibility to read these announcements
+carefully. If you don't, you could easily overlook an important change
+in the course.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge2237e8" class="outline-3">
+<h3 id="orge2237e8"><span class="section-number-3">1.4.</span> Attendance</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Attendance is not mandatory.  You do not need to ask for my permission
+to miss class. To prevent losing points because of a lack of
+attendance, you must present a valid excuse to me beforehand. This
+could involve a family emergency or a documented illness, in which
+case you would need a doctor's note.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0bf6d5d" class="outline-3">
+<h3 id="org0bf6d5d"><span class="section-number-3">1.5.</span> COVID-19</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+It is your responsibility to be aware of NYU's current policies
+regarding COVID-19. Do not ask me to explain them to you. Do not send
+me pictures of COVID-19 rapid tests. Contracting COVID-19 <b>is</b> a valid
+reason for missing class. To demonstrate that you have COVID-19, you
+should send me confirmation of a positive PCR test or a doctor's
+note. Sending me a picture of a positive COVID-19 rapid test the night
+before an exam is not a valid reason for missing the exam. You must
+send me a positive PCR test or a doctor's note, which should be dated no
+later than one day after the exam in question.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f36c74" class="outline-3">
+<h3 id="org1f36c74"><span class="section-number-3">1.6.</span> Course materials</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Unfortunately, there isn't a single textbook which covers the same
+topics in the same order as what I would like to present in class. I
+will provide references to sections from textbooks ahead of time which
+are you are free to read. It is not a requirement to do these
+readings, but obviously if you do them you will understand the
+material much better. These textbooks are also a good source of
+practice problems.
+</p>
+
+<p>
+None of these textbooks are perfect. I've selected them primarily
+because they're available for free online through NYU's library. The
+textbooks I will use (along with links to where you can download them)
+are:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://bobcat.library.nyu.edu/permalink/f/1c17uag/nyu_aleph003776672">Suli and Mayers, "An introduction to numerical analysis"</a></li>
+<li><a href="https://bobcat.library.nyu.edu/permalink/f/ci13eu/nyu_aleph006605343">Scott, "Numerical analysis"</a></li>
+<li><a href="https://bobcat.library.nyu.edu/permalink/f/ci13eu/nyu_aleph004366884">Griffiths and Higham, "Numerical methods for ordinary differential equations - initial value problems"</a></li>
+</ul>
+
+<p>
+The material covered in this course is classical. <b>Many</b> books
+have been written about every topic you'll encounter during the
+semester. If these books don't do it for you, there's nothing
+stopping you from finding another book which you find a bit easier to
+understand. Some other books which you might find helpful but which
+are not available online are:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://bobcat.library.nyu.edu/permalink/f/ci13eu/nyu_aleph002705023">Atkinson and Han, "Elementary numerical analysis"</a></li>
+<li><a href="https://bobcat.library.nyu.edu/permalink/f/1c17uag/COURSES000338641">Burden and Faires, "Numerical analysis"</a></li>
+</ul>
+
+<p>
+I will not provide references to these books, but if you choose to use
+them it shouldn't be difficult to match up what we cover in class
+with the relevant sections in these books.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org626d4e7" class="outline-3">
+<h3 id="org626d4e7"><span class="section-number-3">1.7.</span> Recitation</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+There is a weekly recitation, led by the TA. Attendance is not
+mandatory, but the recitation will be a good source of practice for
+the course. Materials related to the recitation may be posted online
+at the TA's discretion.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd68e58b" class="outline-3">
+<h3 id="orgd68e58b"><span class="section-number-3">1.8.</span> Homework</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+There will be 10 homeworks assigned throughout the semester. The first
+five will be due before the midterm, while the remaining five will be
+due after. The homeworks will include a mixture of written problems
+and programming exercises. Homeworks will be due midnight Monday the
+day before class. See <a href="https://brightspace.nyu.edu/d2l/home/265737">BrightSpace</a> for the exact dates. Homework
+solutions will not be posted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcc386d3" class="outline-3">
+<h3 id="orgcc386d3"><span class="section-number-3">1.9.</span> Recitation worksheets</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+There will be 10 worksheets to be computed during recitation
+throughout the semester. Like the homework, there will be five during
+the first half of the course and five during the second
+half. Solutions to recitations will not be posted.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5e01642" class="outline-3">
+<h3 id="org5e01642"><span class="section-number-3">1.10.</span> Exams</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+There will be a midterm and a final. For each exam, we will have a
+review session beforehand. Exams and exam solutions will not be
+posted. The final exam will be cumulative, and you will be allowed a
+one page (both sides) crib sheet for both exams.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43bd69d" class="outline-3">
+<h3 id="org43bd69d"><span class="section-number-3">1.11.</span> Grading</h3>
+<div class="outline-text-3" id="text-1-11">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Category</th>
+<th scope="col" class="org-right">Percentage</th>
+<th scope="col" class="org-left">Drops</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Homework</td>
+<td class="org-right">20%</td>
+<td class="org-left">1st lowest</td>
+</tr>
+
+<tr>
+<td class="org-left">Worksheets</td>
+<td class="org-right">15%</td>
+<td class="org-left">1st lowest</td>
+</tr>
+
+<tr>
+<td class="org-left">Midterm</td>
+<td class="org-right">30%</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Final</td>
+<td class="org-right">35%</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org290421d" class="outline-3">
+<h3 id="org290421d"><span class="section-number-3">1.12.</span> A few words about course logistics</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+Solutions to homeworks, worksheets, and exams will not be posted,
+because it is your responsibility to investigate your errors. Simply
+reading the correct solution will not be of much use. A better
+approach is to struggle to understand why your solution is
+incorrect. You are always welcome to come to office hours to ask for
+help if you don't know where to get started. Another option is to ask
+your friends. If enough people want help, I may go over some solutions
+in class.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga7aee76" class="outline-2">
+<h2 id="orga7aee76"><span class="section-number-2">2.</span> Schedule</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+(Note: for the references "SM" refers to Suli and Mayers, "S" refers
+to Scott, and "GH" refers to Griffiths and Higham.)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Date</th>
+<th scope="col" class="org-left">Week</th>
+<th scope="col" class="org-left">Topic</th>
+<th scope="col" class="org-left">References</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">1/24</td>
+<td class="org-left">#1</td>
+<td class="org-left">Solving nonlinear equations</td>
+<td class="org-left">S: Ch 1&amp;2, SM: Ch 1</td>
+</tr>
+
+<tr>
+<td class="org-left">1/26</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Convergence of Newton's method</td>
+<td class="org-left">S: Ch 1&amp;2, SM: Ch 1</td>
+</tr>
+
+<tr>
+<td class="org-left">1/31</td>
+<td class="org-left">#2</td>
+<td class="org-left">Computer representation of numbers</td>
+<td class="org-left"><a href="https://dl.acm.org/doi/10.1145/103162.103163">Link</a>, <a href="https://www.ti.com/lit/wp/spry061/spry061.pdf">Link</a></td>
+</tr>
+
+<tr>
+<td class="org-left">2/2</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Matrix norms, conditioning</td>
+<td class="org-left">SM: 2.7-8</td>
+</tr>
+
+<tr>
+<td class="org-left">2/7</td>
+<td class="org-left">#3</td>
+<td class="org-left">The LU factorization</td>
+<td class="org-left">S: 3.1-3, SM: 2.3</td>
+</tr>
+
+<tr>
+<td class="org-left">2/9</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Pivoting</td>
+<td class="org-left">S: 3.4, SM: 2.4</td>
+</tr>
+
+<tr>
+<td class="org-left">2/14</td>
+<td class="org-left">#4</td>
+<td class="org-left">Gram-Schmidt and QR</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2/16</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Householder QR</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2/21</td>
+<td class="org-left">#5</td>
+<td class="org-left">Eigenvalue algorithms - Part I</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2/23</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Eigenvalue algorithms - Part II</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">2/28</td>
+<td class="org-left">#6</td>
+<td class="org-left">The SVD - Part I</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/2</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">The SVD - Part II</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/7</td>
+<td class="org-left">#7</td>
+<td class="org-left">Review</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/9</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Midterm #1</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/14</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Spring break - no class</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/16</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><b>Spring break - no class</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/21</td>
+<td class="org-left">#8</td>
+<td class="org-left">Lagrange interpolation</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/23</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Hermite interpolation</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/28</td>
+<td class="org-left">#9</td>
+<td class="org-left">The Vandermonde matrix</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">3/30</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">The cardinal basis</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/4</td>
+<td class="org-left">#10</td>
+<td class="org-left">Orthogonal polynomials</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/6</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Chebyshev polynomials</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/11</td>
+<td class="org-left">#11</td>
+<td class="org-left">Newton-Cotes integration</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/13</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Gaussian quadrature</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/18</td>
+<td class="org-left">#12</td>
+<td class="org-left">ODEs: Euler's method, Richardson extrapolation</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/20</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">ODEs: local vs. global error, more methods</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/25</td>
+<td class="org-left">#13</td>
+<td class="org-left">ODEs: consistency, stability, and convergence</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">4/27</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">ODEs: A-stability</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">5/2</td>
+<td class="org-left">#14</td>
+<td class="org-left">Trigonometric interpolation, the DFT</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">5/4</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Review</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
 </html>

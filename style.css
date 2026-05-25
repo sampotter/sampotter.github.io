@@ -108,6 +108,10 @@ section.teaching {
 	padding:1rem;
 }
 
+section.nsfw {
+	padding:1rem;
+}
+
 section.talks {
 	padding:1rem;
 }
@@ -121,7 +125,7 @@ figure.paper {
 }
 
 img.paper-thumb {
-	width:6.6%;
+	width:9%;
 }
 
 figcaption.paper-info {
@@ -130,4 +134,12 @@ figcaption.paper-info {
 
 section.experience {
 	padding:1rem;
+}
+
+div.email > span:nth-child(2) {
+    display: none;
+}
+
+div.cell > span:nth-child(2) {
+    display: none;
 }

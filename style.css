@@ -1,145 +1,476 @@
+/* ============================================================
+   Sam Potter — academic homepage
+   ============================================================ */
+
+/* ---- Comic Code (self-hosted, licensed) ----
+   Weight 600 (semibold) is covered by Medium so the
+   Regular / Medium / Bold hierarchy stays intact. */
+@font-face {
+  font-family: "Comic Code";
+  src: url("fonts/ComicCode-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Comic Code";
+  src: url("fonts/ComicCode-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Comic Code";
+  src: url("fonts/ComicCode-Medium.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Comic Code";
+  src: url("fonts/ComicCode-MediumItalic.woff2") format("woff2");
+  font-weight: 500 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Comic Code";
+  src: url("fonts/ComicCode-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Comic Code";
+  src: url("fonts/ComicCode-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Konsole "Black on Light Yellow" scheme */
+  --bg:        #ffffdd;
+  --panel:     #fffff2;
+  --ink:       #191712;
+  --ink-soft:  #45412e;
+  --muted:     #57532f;
+  --line:      #e3dda8;
+  --line-soft: #ece7bf;
+  --accent:    #b21818;
+  --accent-2:  #8c1212;
+  --chip-bg:   #f6efc0;
+  --chip-line: #e2d79c;
+  --shadow:    none;
+  /* one monospace family throughout */
+  --serif: "Comic Code", ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  --sans: var(--serif);
+  --mono: var(--serif);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* warm inverse: light yellow on near-black */
+    --bg:        #14130b;
+    --panel:     #1d1b10;
+    --ink:       #f6f2cf;
+    --ink-soft:  #cdc79c;
+    --muted:     #97916a;
+    --line:      #34311d;
+    --line-soft: #262316;
+    --accent:    #ff5454;
+    --accent-2:  #ff8a8a;
+    --chip-bg:   #2a2716;
+    --chip-line: #454126;
+    --shadow:    none;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
-	font-family: source-serif-4, serif;
-	font-weight: 400;
-	font-style: normal;
-	font-size: 1.25em;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.075rem;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-ul {
-	list-style-type:'⁃';
-	padding:1rem;
-	margin:0rem;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  text-underline-offset: 2px;
+  transition: color .15s ease;
+}
+a:hover { color: var(--accent-2); text-decoration: underline; }
+
+/* ---------------- Layout ---------------- */
+
+.layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 3rem) clamp(1.1rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
 }
 
-li {
-	padding-left:0.5rem;
-	padding-bottom:0.1rem;
+@media (min-width: 940px) {
+  .layout {
+    grid-template-columns: 300px minmax(0, 1fr);
+    align-items: start;
+  }
 }
 
-h1.basic {
-	padding:0rem;
-	margin:0rem;
+/* ---------------- Sidebar ---------------- */
+
+.sidebar-inner {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: var(--shadow);
 }
 
-div.mugshot-and-contact {
-	display:flex;
-	flex-direction:column;
+@media (min-width: 940px) {
+  .sidebar-inner {
+    position: sticky;
+    top: clamp(1rem, 3vw, 2rem);
+  }
 }
 
-@media (min-width: 600px) {
-	div.mugshot-and-contact {
-		flex-direction:row;
-	}
+.mugshot { position: relative; }
+
+.mugshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0;
+  border: 1px solid var(--line);
 }
 
-section.bio {
-	display:flex;
-	flex-direction:column;
+/* hover swap: penguin fades in over the avatar */
+.mugshot .mug-hover {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.mugshot:hover .mug-hover { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mugshot .mug-hover { transition: none; }
 }
 
-section.course-overview {
-	display:flex;
-	flex-direction:column;
+.identity { margin-top: 1.25rem; }
+
+.name {
+  font-family: var(--sans);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.2;
+  margin: 0;
+}
+.name a { color: var(--ink); }
+.name a:hover { color: var(--accent); text-decoration: none; }
+
+.role {
+  font-family: var(--sans);
+  font-size: .9rem;
+  color: var(--ink-soft);
+  margin: .55rem 0 0;
+  line-height: 1.4;
 }
 
-th {
-	text-align:left;
-	padding-right:1rem;
+/* ---- in-page nav ---- */
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: 1.35rem 0;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+.site-nav a {
+  font-family: var(--sans);
+  font-size: .86rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: .28rem .6rem;
+  border-radius: 0;
+}
+.site-nav a:hover {
+  color: var(--accent);
+  background: var(--chip-bg);
+  text-decoration: none;
 }
 
-td {
-	padding:0.1rem;
-	padding-right:1rem;
+/* ---- contact ---- */
+
+.contact-heading {
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 .85rem;
 }
 
-td.label {
-	font-weight:bold;
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: .92rem;
 }
 
-table {
-	padding-bottom:1rem;
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .32rem 0;
+  color: var(--ink-soft);
+  white-space: nowrap;
 }
 
-table.course-table {
-	margin:1rem;
+.emoji {
+  flex: 0 0 auto;
+  width: 1.4em;
+  text-align: center;
 }
 
-div.course-section {
-	padding:1rem;
+.photos a { padding: 0 .12rem; }
+
+/* ---------------- Main content ---------------- */
+
+.content { min-width: 0; }
+
+.block {
+  scroll-margin-top: 1.5rem;
+  margin-bottom: clamp(2rem, 5vw, 3.25rem);
 }
 
-@media (min-width: 1200px) {
-	section.bio {
-		flex-direction:row;
-	}
+.section-title {
+  font-family: var(--sans);
+  font-size: 1.28rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin: 0 0 1.25rem;
+  padding-bottom: .5rem;
+  position: relative;
+  width: fit-content;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  border-radius: 0;
+  background: var(--accent);
 }
 
-div.mugshot {
-	padding:1rem;
+/* ---- prose ---- */
+
+.prose p { margin: 0 0 1.05rem; color: var(--ink); }
+.prose p:last-child { margin-bottom: 0; }
+
+/* ---- software ---- */
+
+.soft-list { list-style: none; margin: 0; padding: 0; }
+
+.soft-item {
+  padding: .3rem 0;
+  border-top: 1px solid var(--line-soft);
+}
+.soft-item:first-child { border-top: 1px solid var(--line); }
+
+.proj {
+  font-weight: 600;
+  color: var(--accent);
+  margin-right: .55rem;
+}
+.soft-desc { color: var(--muted); font-size: .9rem; }
+
+.soft-note {
+  color: var(--muted);
+  font-size: .9rem;
+  margin: .75rem 0 0;
+  padding-top: .6rem;
+  border-top: 1px solid var(--line-soft);
 }
 
-div.contact {
-	padding:1rem;
+/* ---- papers ---- */
+
+.paper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  transition: border-color .15s ease, background-color .15s ease;
+}
+.paper + .paper { margin-top: .9rem; }
+.paper:hover { border-color: var(--accent); }
+
+.paper-thumb {
+  flex: 0 0 auto;
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 0;
+  border: 1px solid var(--line);
+  background: var(--bg);
 }
 
-div.contact-line {
-	white-space:nowrap;
-	padding-bottom:0.25rem;
+.paper-info { min-width: 0; }
+
+.authors {
+  font-family: var(--sans);
+  font-size: .84rem;
+  color: var(--muted);
+  margin-bottom: .18rem;
+}
+.me {
+  color: var(--ink);
+  font-weight: 600;
+  font-style: normal;
 }
 
-div.info-line {
-	white-space:nowrap;
-	padding-bottom:0.25rem;
+.paper-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: .28rem;
 }
 
-div.about-me {
-	padding:1rem;
+.venue {
+  font-size: .92rem;
+  color: var(--ink-soft);
+  margin-bottom: .55rem;
+}
+.venue em { font-style: italic; }
+
+.paper-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+.paper-links a {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-line);
+  border-radius: 0;
+  padding: .16rem .62rem;
+  line-height: 1.4;
+}
+.paper-links a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+@media (prefers-color-scheme: dark) {
+  .paper-links a:hover { color: #0f1115; }
 }
 
-section.code {
-	padding:1rem;
+/* ---- talks ---- */
+
+.talk-list { list-style: none; margin: 0; padding: 0; }
+.talk {
+  display: flex;
+  gap: .8rem;
+  padding: .3rem 0;
+  border-top: 1px solid var(--line-soft);
+}
+.talk:first-child { border-top: 1px solid var(--line); }
+.talk-year {
+  flex: 0 0 2.6rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--muted);
+  padding-top: .12rem;
+}
+.talk-body {
+  min-width: 0;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.talk-name {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.talk-at a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--chip-line);
+  text-underline-offset: 2px;
+}
+.talk-at a:hover { color: var(--accent); text-decoration-color: currentColor; }
+.talk-slides { white-space: nowrap; }
+
+/* ---- teaching ---- */
+
+.teach-list { list-style: none; margin: 0; padding: 0; }
+.teach-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem 1rem;
+  padding: .7rem 0;
+  border-top: 1px solid var(--line-soft);
+}
+.teach-list li:first-child { border-top: 1px solid var(--line); }
+.teach-term {
+  font-family: var(--sans);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--muted);
+  flex: 0 0 auto;
+  min-width: 8.5rem;
+}
+.teach-course { color: var(--ink); }
+
+/* ---- footer ---- */
+
+.site-footer {
+  font-family: var(--sans);
+  font-size: .82rem;
+  color: var(--muted);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-soft);
 }
 
-section.papers {
-	padding:1rem;
-}
-
-section.teaching {
-	padding:1rem;
-}
-
-section.nsfw {
-	padding:1rem;
-}
-
-section.talks {
-	padding:1rem;
-}
-
-figure.paper {
-	display: flex;
-	align-items: center;
-	margin:0rem;
-	padding-top:1rem;
-	padding-bottom:1rem;
-}
-
-img.paper-thumb {
-	width:9%;
-}
-
-figcaption.paper-info {
-	padding-left:1rem;
-}
-
-section.experience {
-	padding:1rem;
-}
-
-div.email > span:nth-child(2) {
-    display: none;
-}
-
-div.cell > span:nth-child(2) {
-    display: none;
-}
+/* ============================================================
+   Contact obfuscation — the middle <span> is decoy text that
+   is hidden, so the real address never appears contiguously.
+   ============================================================ */
+.email > span:nth-child(2) { display: none; }
+.cell  > span:nth-child(2) { display: none; }

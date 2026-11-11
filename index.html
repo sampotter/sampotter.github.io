@@ -1,231 +1,282 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="description" content="Academic home page of Samuel F. Potter">
+    <meta name="description" content="Samuel F. Potter: math and geometry at McNeel.">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="canonical" href="https://sampotter.github.io/">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/ami0bso.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <title>Sam Potter</title>
   </head>
 
   <body>
-    <section class="nav-bar" style="padding:1rem;">
-      <a href="https://sampotter.github.io">Sam(uel F.) Potter</a> /
-      <a href="#about-me">About me</a> /
-      <a href="#software">Software</a> /
-      <a href="#papers">Papers</a> /
-      <a href="#teaching">Teaching</a>
-    </section>
+    <div class="layout">
 
-    <section class="bio">
-      <div class="mugshot-and-contact">
-	<div class="mugshot">
-	  <img alt="Sam Potter" src="me5.jpg" style="width:300px;height:auto;">
-	</div>
+      <!-- ===================== SIDEBAR ===================== -->
+      <aside class="sidebar">
+        <div class="sidebar-inner">
+          <div class="mugshot">
+            <img class="mug-face" alt="Sam Potter" src="me6.jpg" width="300" height="300">
+            <img class="mug-hover" src="penguin.png" width="300" height="300" alt="" aria-hidden="true">
+          </div>
 
-	<div class="contact">
-	  <h1 class="basic">Connect</h1>
-	  <p>
-	    <div class="contact-line"><div class="email">&#x1F98F; sam@<span>mcneel</span>.<span>weeee</span>com</div></div>
-	    <div class="contact-line">&#128682; Seattle, WA </div>
-	    <div class="contact-line"><div class="cell">&#128241; <span>(206) 265</span>-<span>12345</span><span>3902</span></div></div>
-	    <div class="contact-line">&#128187; <a href="https://github.com/sampotter">GitHub</a></div>
-	    <div class="contact-line">&#128218; <a href="https://scholar.google.com/citations?hl=en&user=tOGrA8IAAAAJ">Google Scholar</a></div>
-	    <div class="contact-line">
-	      &#128247;
-	      <a href="pics/wedding.jpg">1</a> /
-	      <a href="pics/ada.jpg">2</a> /
-	      <a href="pics/xenobia.jpg">3</a> /
-	      <a href="pics/orcas.jpg">4</a>
-	    </div>
-	  </p>
-	</div>
-      </div>
+          <div class="identity">
+            <h1 class="name"><a href="https://sampotter.github.io">Sam(uel&nbsp;F.)&nbsp;Potter</a></h1>
+            <p class="role">Robert McNeel &amp; Associates</p>
+          </div>
 
-      <div class="about-me">
-	<h1 id="about-me" class="basic">About me</h1>
-	<p>I'm back in my hometown of Seattle, working at Robert McNeel &amp; Associates on <a href="https://www.rhino3d.com/">Rhinoceros 3D's</a> CAD kernel. I like to develop ridiculously fast and accurate numerical algorithms, and I'm excited to have the opportunity to use my expertise to help improve one of the world's most beloved programs.</p>
+          <nav class="site-nav" aria-label="Sections">
+            <a href="#about-me">About</a>
+            <a href="#software">Software</a>
+            <a href="#papers">Papers</a>
+            <a href="#talks">Talks</a>
+            <a href="#teaching">Teaching</a>
+          </nav>
 
-	<p>Previously, I was a Research Scientist at <a href="https://www.coreform.com">Coreform, LLC</a>, where I  worked on the first commercial implementation of isogeometric analysis, with an emphasis on immersed methods (e.g., CutIGA). While at Coreform, I focused on high-order trimming algorithms for nonsmooth CAD/CSG domains defined by implicit functions and applying numerical optimization to the design of Gaussian quadrature rules on cut cells.</p>
+          <div class="contact">
+            <h2 class="contact-heading">Connect</h2>
+            <ul class="contact-list">
+              <li class="contact-line">
+                <span class="emoji">&#x1F98F;</span>
+                <span class="email">sam@<span>mcneel</span>.<span>weeee</span>com</span>
+              </li>
+              <li class="contact-line">
+                <span class="emoji">&#128682;</span>
+                <span>Seattle, WA</span>
+              </li>
+              <li class="contact-line">
+                <span class="emoji">&#128241;</span>
+                <span class="cell"><span>(206) 265</span>-<span>12345</span><span>3902</span></span>
+              </li>
+              <li class="contact-line">
+                <span class="emoji">&#128187;</span>
+                <a href="https://github.com/sampotter">GitHub</a>
+              </li>
+              <li class="contact-line">
+                <span class="emoji">&#128218;</span>
+                <a href="https://scholar.google.com/citations?hl=en&user=tOGrA8IAAAAJ">Google Scholar</a>
+              </li>
+              <li class="contact-line">
+                <span class="emoji">&#128247;</span>
+                <span class="photos">
+                  <a href="me5.jpg">1</a> /
+                  <a href="pics/wedding.jpg">2</a> /
+                  <a href="pics/ada.jpg">3</a> /
+                  <a href="pics/xenobia.jpg">4</a> /
+                  <a href="pics/orcas.jpg">5</a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
 
-	<p>Earlier still, I was a Courant Instructor at NYU&#8217;s <a href="https://cims.nyu.edu">Courant Institute of Mathematical Sciences</a> working with <a href="https://math.nyu.edu/~greengar/">Leslie Greengard</a> and <a href="https://cims.nyu.edu/~oneil/">Mike O&apos;Neil</a>, where I was also affiliated with the Flatiron Institute's <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-mathematics/">Center for Computational Mathematics</a>.</p>
+      <!-- ===================== MAIN ===================== -->
+      <main class="content">
 
-	<p>I originally obtained my PhD from the University of Maryland&#8217;s <a href="https://cs.umd.edu">Department of Computer Science</a>, where I was advised by <a href="https://www.math.umd.edu/~mariakc/index.html">Masha Cameron</a> and <a href="https://www.cs.umd.edu/people/rduraisw">Ramani Duraiswami</a>. Before that, I received an MS in electrical engineering from the University of Maryland and a BS in mathematics from the University of Washington in Seattle.</p>
-      </div>
-    </section>
+        <section class="block" id="about-me">
+          <h2 class="section-title">About me</h2>
+          <div class="prose">
+            <p>I'm back in my hometown of Seattle, developing ridiculously fast and accurate numerical algorithms for <a href="https://www.rhino3d.com/">Rhinoceros 3D's</a> CAD kernel at Robert McNeel &amp; Associates.</p>
 
-    <section class="code">
-      <h1 id="software" class="basic">Software</h1>
-      <ul>
-	<li>Open source software development at McNeel takes place <a href="https://github.com/mcneel">on GitHub</a>.</li>
-	<li>Many interesting proprietary innovations at <a href="https://www.coreform.com">Coreform, LLC</a>.</li>
-	<li><a href="https://github.com/sampotter/butterfly">butterfly</a> / C99 library with Python bindings implementing the butterfly factorization along with a few applications.</li>
-	<li><a href="https://github.com/sampotter/jmm">jmm</a> / C99 library with Python bindings implementing the jet marching method for solving the eikonal equation.</li>
-	<li><a href="https://github.com/sampotter/python-flux">python-flux</a> / a fast boundary element method for thermal and illumination modeling in planetary science.</li>
-	<li><a href="https://github.com/sampotter/python-embree">python-embree</a> / a thin Embree 3 wrapper featuring easy interop with numpy and consistency with the Embree C API.</li>
-	<li><a href="https://github.com/sampotter/olim/tree/develop">olim</a> / C++ implementation of the ordered line integral method for the eikonal equation in 2D and 3D.</li>
-	<li><a href="https://github.com/sampotter/nufft">nufft</a> / 1D nonuniform fast Fourier transform (FFT), based on the fast multipole method for the Hilbert kernel and written in C++.</li>
-      </ul>
-    </section>
+            <p>Previously I was a Research Scientist at <a href="https://www.coreform.com">Coreform</a> (immersed isogeometric analysis) and a Courant Instructor at <a href="https://cims.nyu.edu">NYU</a> with <a href="https://math.nyu.edu/~greengar/">Leslie Greengard</a> and <a href="https://cims.nyu.edu/~oneil/">Mike O&apos;Neil</a>, affiliated with the Flatiron Institute's <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-mathematics/">Center for Computational Mathematics</a>. I earned my PhD in computer science at <a href="https://cs.umd.edu">Maryland</a>, advised by <a href="https://www.math.umd.edu/~mariakc/index.html">Masha Cameron</a> and <a href="https://www.cs.umd.edu/people/rduraisw">Ramani Duraiswami</a>.</p>
+          </div>
+        </section>
 
-    <section class="papers">
-      <h1 id="papers" class="basic">Papers</h1>
+        <section class="block" id="software">
+          <h2 class="section-title">Software</h2>
+          <ul class="soft-list">
+            <li class="soft-item"><a class="proj" href="https://github.com/sampotter/butterfly">butterfly</a><span class="soft-desc">the butterfly factorization, in C99 with Python bindings</span></li>
+            <li class="soft-item"><a class="proj" href="https://github.com/sampotter/jmm">jmm</a><span class="soft-desc">the jet marching method for the eikonal equation (C99/Python)</span></li>
+            <li class="soft-item"><a class="proj" href="https://github.com/sampotter/python-flux">python-flux</a><span class="soft-desc">fast BEM for thermal &amp; illumination modeling in planetary science</span></li>
+            <li class="soft-item"><a class="proj" href="https://github.com/sampotter/python-embree">python-embree</a><span class="soft-desc">thin Embree 3 wrapper with easy numpy interop</span></li>
+            <li class="soft-item"><a class="proj" href="https://github.com/sampotter/olim/tree/develop">olim</a><span class="soft-desc">ordered line integral method for the eikonal equation, in C++</span></li>
+            <li class="soft-item"><a class="proj" href="https://github.com/sampotter/nufft">nufft</a><span class="soft-desc">1D nonuniform FFT via the fast multipole method (C++)</span></li>
+          </ul>
+          <p class="soft-note">Open-source work at McNeel is <a href="https://github.com/mcneel">on GitHub</a>; proprietary work at <a href="https://www.coreform.com">Coreform</a>.</p>
+        </section>
 
-      <!-- Scattering theory for Stokes flow in complex branched structures -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/bamht.png">
-	<figcaption class="paper-info">
-	  <div>Paul G. Beckman, <em>Samuel F. Potter</em>, Michael O'Neil</div>
-	  <div><strong>A butterfly-accelerated manifold harmonic transform</strong></div>
-	  <a href="https://arxiv.org/abs/2605.21828">arXiv</a>
-	</figcaption>
-      </figure>
+        <section class="block" id="papers">
+          <h2 class="section-title">Papers</h2>
 
-      <!-- Scattering theory for Stokes flow in complex branched structures -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/stokes.png">
-	<figcaption class="paper-info">
-	  <div>Haiyang Wang, Fredrik Fryklund, <em>Samuel Potter</em>, Leslie Greengard</div>
-	  <div><strong>Scattering theory for Stokes flow in complex branched structures</strong></div>
-	  <a href="https://arxiv.org/abs/2509.12500">arXiv</a>
-	</figcaption>
-      </figure>
+          <!-- A butterfly-accelerated manifold harmonic transform -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/bamht.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors">Paul G. Beckman, <span class="me">Samuel F. Potter</span>, Michael O'Neil</div>
+              <div class="paper-title">A butterfly-accelerated manifold harmonic transform</div>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2605.21828">arXiv</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Fast construction of efficient cut cell quadratures -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/quadrature.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em></div>
-	  <div><strong>Fast construction of efficient cut cell quadratures</strong></div>
-	  <a href="./papers/cut-cell-quadrature.pdf">Draft</a> / <a href="./talks/cut-cell-quadrature-siam-an25.pdf">SIAM AN25 Talk</a>
-	</figcaption>
-      </figure>
+          <!-- Scattering theory for Stokes flow in complex branched structures -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/stokes.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors">Haiyang Wang, Fredrik Fryklund, <span class="me">Samuel Potter</span>, Leslie Greengard</div>
+              <div class="paper-title">Scattering theory for Stokes flow in complex branched structures</div>
+              <div class="paper-links"><a href="https://arxiv.org/abs/2509.12500">arXiv</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- A lightweight, geometrically flexible fast algorithm for the evaluation of layer and volume potentials -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/poisson.png">
-	<figcaption class="paper-info">
-	  <div>Fredrik Fryklund, Leslie Greengard, Shidong Jiang, <em>Samuel Potter</em></div>
-	  <div><strong>A lightweight, geometrically flexible fast algorithm for the evaluation of layer and volume potentials</strong></div>
-	  <div><em>Journal of Computational Physics</em> / 2025</div>
-	  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999125007879">JCP</a> /
-	  <a href="https://arxiv.org/abs/2409.11998">arXiv</a>
-	</figcaption>
-      </figure>
+          <!-- Fast construction of efficient cut cell quadratures -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/quadrature.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span></div>
+              <div class="paper-title">Fast construction of efficient cut cell quadratures</div>
+              <div class="paper-links"><a href="./papers/cut-cell-quadrature.pdf">Draft</a> <a href="./talks/cut-cell-quadrature-siam-an25.pdf">SIAM AN25 Talk</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Computing acoustic onsets via an eikonal solver -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/head-mesh.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em>, Monte Hoover, Dmitry Zotkin, Ramani Duraiswami</div>
-	  <div><strong>Computing acoustic onsets via an eikonal solver</strong></div>
-	  <div><em>IEEE Workshop on Applications of Signal Processing to Audio and Acoustics</em> / 2023</div>
-	  <a href="https://ieeexplore.ieee.org/abstract/document/10248158">WASPAA</a>
-	</figcaption>
-      </figure>
-      
-      <!-- Fast hierarchical low-rank view factor matrices for thermal
-	   irradiance on planetary surfaces -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/flux.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em>, Stefano Bertone, Norbert Sch&#246;rghofer, Erwan Mazarico</div>
-	  <div><strong>Fast hierarchical low-rank view factor matrices for thermal irradiance on planetary surfaces</strong></div>
-	  <div><em>Journal of Computational Physics: X</em> / 2023</div>
-	  <a href="https://www.sciencedirect.com/science/article/pii/S2590055223000082">JCP: X</a> /
-	  <a href="https://arxiv.org/abs/2209.07632">arXiv</a> /
-	  <a href="https://github.com/sampotter/python-flux">code</a>
-	</figcaption>
-      </figure>
+          <!-- A lightweight, geometrically flexible fast algorithm for the evaluation of layer and volume potentials -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/poisson.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors">Fredrik Fryklund, Leslie Greengard, Shidong Jiang, <span class="me">Samuel Potter</span></div>
+              <div class="paper-title">A lightweight, geometrically flexible fast algorithm for the evaluation of layer and volume potentials</div>
+              <div class="venue"><em>Journal of Computational Physics</em> · 2025</div>
+              <div class="paper-links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999125007879">JCP</a> <a href="https://arxiv.org/abs/2409.11998">arXiv</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Numerical geometric acoustics: an eikonal-based approach for modeling sound propagation in 3D environments -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/jmm3d.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em>, Maria K Cameron, Ramani Duraiswami</div>
-	  <div><strong>Numerical geometric acoustics: an eikonal-based approach for modeling sound propagation in 3D environments</strong></div>
-	  <div><em>Journal of Computational Physics</em> / 2023</div>
-	  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999123002061">JCP</a> /
-	  <a href="https://arxiv.org/abs/2208.13002">arXiv</a> /
-	  <a href="https://github.com/sampotter/jmm">code</a>
-	</figcaption>
-      </figure>
+          <!-- Computing acoustic onsets via an eikonal solver -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/head-mesh.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span>, Monte Hoover, Dmitry Zotkin, Ramani Duraiswami</div>
+              <div class="paper-title">Computing acoustic onsets via an eikonal solver</div>
+              <div class="venue"><em>IEEE Workshop on Applications of Signal Processing to Audio and Acoustics</em> · 2023</div>
+              <div class="paper-links"><a href="https://ieeexplore.ieee.org/abstract/document/10248158">WASPAA</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Jet marching methods for solving the eikonal equation -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/jmm2d.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em>, Maria K Cameron</div>
-	  <div><strong>Jet marching methods for solving the eikonal equation</strong></div>
-	  <div>Journal on Scientific Computing / SIAM / 2021</div>
-	  <a href="https://epubs.siam.org/doi/abs/10.1137/20M1366526">SIAM</a> /
-	  <a href="https://arxiv.org/abs/2009.05490">arXiv</a> /
-	  <a href="https://github.com/sampotter/jmm">code</a>
-	</figcaption>
-      </figure>
+          <!-- Fast hierarchical low-rank view factor matrices for thermal irradiance on planetary surfaces -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/flux.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span>, Stefano Bertone, Norbert Sch&#246;rghofer, Erwan Mazarico</div>
+              <div class="paper-title">Fast hierarchical low-rank view factor matrices for thermal irradiance on planetary surfaces</div>
+              <div class="venue"><em>Journal of Computational Physics: X</em> · 2023</div>
+              <div class="paper-links"><a href="https://www.sciencedirect.com/science/article/pii/S2590055223000082">JCP: X</a> <a href="https://arxiv.org/abs/2209.07632">arXiv</a> <a href="https://github.com/sampotter/python-flux">code</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Ordered line integral methods for solving the eikonal equation -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/olim.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em>, Maria K Cameron</div>
-	  <div><strong>Ordered line integral methods for solving the eikonal equation</strong></div>
-	  <div>Journal of Scientific Computing / Springer / 2019</div>
-	  <a href="https://link.springer.com/article/10.1007/s10915-019-01077-z">JOMP</a> /
-	  <a href="https://arxiv.org/abs/1902.06825">arXiv</a> /
-	  <a href="https://github.com/sampotter/olim/tree/develop">code</a>
-	</figcaption>
-      </figure>
+          <!-- Numerical geometric acoustics -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/jmm3d.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span>, Maria K Cameron, Ramani Duraiswami</div>
+              <div class="paper-title">Numerical geometric acoustics: an eikonal-based approach for modeling sound propagation in 3D environments</div>
+              <div class="venue"><em>Journal of Computational Physics</em> · 2023</div>
+              <div class="paper-links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999123002061">JCP</a> <a href="https://arxiv.org/abs/2208.13002">arXiv</a> <a href="https://github.com/sampotter/jmm">code</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Computing the quasipotential for nongradient SDEs in 3D -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/qpot3d.png">
-	<figcaption class="paper-info">
-	  <div>Shuo Yang, <em>Samuel F Potter</em>, Maria K Cameron</div>
-	  <div><strong>Computing the quasipotential for nongradient SDEs in 3D</strong></div>
-	  <div>Journal of Computational Physics / Elsevier / 2019</div>
-	  <a href="https://doi.org/10.1016/j.jcp.2018.12.005">JCP</a> /
-	  <a href="https://arxiv.org/pdf/1808.00562.pdf">arXiv</a> /
-	  <a href="https://www.math.umd.edu/~mariakc/OLIM.html">code</a>
-	</figcaption>
-      </figure>
+          <!-- Jet marching methods for solving the eikonal equation -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/jmm2d.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span>, Maria K Cameron</div>
+              <div class="paper-title">Jet marching methods for solving the eikonal equation</div>
+              <div class="venue"><em>Journal on Scientific Computing</em> · SIAM · 2021</div>
+              <div class="paper-links"><a href="https://epubs.siam.org/doi/abs/10.1137/20M1366526">SIAM</a> <a href="https://arxiv.org/abs/2009.05490">arXiv</a> <a href="https://github.com/sampotter/jmm">code</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Fast and stable Pascal matrix algorithms -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/pascal.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em>, Ramani Duraiswami</div>
-	  <div><strong>Fast and stable Pascal matrix algorithms</strong></div>
-	  <div>Technical report / 2017</div>
-	  <a href="https://arxiv.org/abs/1711.08453">arXiv</a>
-	</figcaption>
-      </figure>
+          <!-- Ordered line integral methods for solving the eikonal equation -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/olim.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span>, Maria K Cameron</div>
+              <div class="paper-title">Ordered line integral methods for solving the eikonal equation</div>
+              <div class="venue"><em>Journal of Scientific Computing</em> · Springer · 2019</div>
+              <div class="paper-links"><a href="https://link.springer.com/article/10.1007/s10915-019-01077-z">JOMP</a> <a href="https://arxiv.org/abs/1902.06825">arXiv</a> <a href="https://github.com/sampotter/olim/tree/develop">code</a></div>
+            </figcaption>
+          </figure>
 
-      <!-- Fast interpolation of bandlimited functions -->
-      <figure class="paper">
-	<img class="paper-thumb" src="thumbnails/icassp2017.png">
-	<figcaption class="paper-info">
-	  <div><em>Samuel F Potter</em>, Nail A Gumerov, Ramani Duraiswami</div>
-	  <div><strong>Fast interpolation of bandlimited functions</strong></div>
-	  <div>ICASSP / IEEE / 2017</div>
-	  <a href="./papers/icassp2017.pdf">pdf</a> /
-	  <a href="https://github.com/sampotter/nufft">code</a>
-	</figcaption>
-      </figure>
-    </section>
+          <!-- Computing the quasipotential for nongradient SDEs in 3D -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/qpot3d.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors">Shuo Yang, <span class="me">Samuel F Potter</span>, Maria K Cameron</div>
+              <div class="paper-title">Computing the quasipotential for nongradient SDEs in 3D</div>
+              <div class="venue"><em>Journal of Computational Physics</em> · Elsevier · 2019</div>
+              <div class="paper-links"><a href="https://doi.org/10.1016/j.jcp.2018.12.005">JCP</a> <a href="https://arxiv.org/pdf/1808.00562.pdf">arXiv</a> <a href="https://www.math.umd.edu/~mariakc/OLIM.html">code</a></div>
+            </figcaption>
+          </figure>
 
-    <section class="teaching">
-      <h1 id="teaching" class="basic">Teaching</h1>
-      <ul>
-	<li>NYU / Spring 2023 / Numerical Analysis</li> <!-- / <a href="./courses/nyu-spring-2023-math-ua-252.html">link</a></li> -->
-<li>NYU / Fall 2022 / Linear and Nonlinear Optimization</li> <!-- / <a href="./courses/nyu-fall-2022-math-ua-253.html">link</a></li> -->
-<li>NYU / Spring 2022 / Numerical Analysis</li> <!-- / <a href="./courses/nyu-spring-2022-math-ua-252.html">link</a></li> -->
-<li>NYU / Fall 2021 / Calculus 3</li> <!-- / <a href="./courses/nyu-fall-2021-math-ua-123.html">link</a></li> -->
-</ul>
-</section>
+          <!-- Fast and stable Pascal matrix algorithms -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/pascal.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span>, Ramani Duraiswami</div>
+              <div class="paper-title">Fast and stable Pascal matrix algorithms</div>
+              <div class="venue">Technical report · 2017</div>
+              <div class="paper-links"><a href="https://arxiv.org/abs/1711.08453">arXiv</a></div>
+            </figcaption>
+          </figure>
 
-</body>
+          <!-- Fast interpolation of bandlimited functions -->
+          <figure class="paper">
+            <img class="paper-thumb" src="thumbnails/icassp2017.png" alt="">
+            <figcaption class="paper-info">
+              <div class="authors"><span class="me">Samuel F Potter</span>, Nail A Gumerov, Ramani Duraiswami</div>
+              <div class="paper-title">Fast interpolation of bandlimited functions</div>
+              <div class="venue">ICASSP · IEEE · 2017</div>
+              <div class="paper-links"><a href="./papers/icassp2017.pdf">pdf</a> <a href="https://github.com/sampotter/nufft">code</a></div>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section class="block" id="talks">
+          <h2 class="section-title">Talks</h2>
+          <ul class="talk-list">
+            <li class="talk"><span class="talk-year">2025</span><span class="talk-body"><span class="talk-name">Fast cut cell quadratures and robust contouring algorithms</span><span class="talk-at"> · <a href="https://amath.washington.edu/news/2025/11/20/sam-potter-fast-cut-cell-quadratures-and-robust-contouring-algorithms">Seminar in Applied Mathematics, University of Washington</a></span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Fast cut cell quadratures and robust contouring algorithms</span><span class="talk-at"> · Seminar, Geometric Computing Lab, NYU (D. Panozzo)</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Fast construction of efficient cut cell quadratures</span><span class="talk-at"> · SIAM Annual Meeting</span></span></li>
+
+            <li class="talk"><span class="talk-year">2024</span><span class="talk-body"><span class="talk-name">Butterfly-accelerated Gaussian random fields on manifolds</span><span class="talk-at"> · ALGORITMY 2024</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Jet marching on unstructured meshes: algorithms and applications</span><span class="talk-at"> · ALGORITMY 2024</span></span></li>
+
+            <li class="talk"><span class="talk-year">2023</span><span class="talk-body"><span class="talk-name">Jet marching methods for numerical geometric acoustics</span><span class="talk-at"> · ICIAM 2023</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Butterfly-accelerated multiple scattering in two dimensions</span><span class="talk-at"> · ICOSAHOM 2023</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Recent progress on the butterfly factorization</span><span class="talk-at"> · University of Maryland</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Butterfly-accelerated manifold harmonic transforms</span><span class="talk-at"> · SIAM CSE 2023</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Butterfly-accelerated manifold harmonic transforms</span><span class="talk-at"> · Western Washington University · job talk</span></span></li>
+
+            <li class="talk"><span class="talk-year">2022</span><span class="talk-body"><span class="talk-name">Butterfly-accelerated manifold harmonic transforms</span><span class="talk-at"> · Numerical Analysis Day, NYU</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Fast algorithm for terrain irradiance using compressed view factor matrices</span><span class="talk-at"> · CMG 2022</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Jet marching methods for numerical geometric acoustics</span><span class="talk-at"> · Courant Instructor Day, NYU</span></span></li>
+
+            <li class="talk"><span class="talk-year">2021</span><span class="talk-body"><span class="talk-name">Jet marching methods for numerical geometric acoustics</span><span class="talk-at"> · NASC Seminar, NYU</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Numerical geometric acoustics</span><span class="talk-at"> · <a href="https://www.cs.umd.edu/event/2021/07/phd-defense-numerical-geometric-acoustics">Dissertation defense, University of Maryland</a></span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Fast algorithms and precomputation in room acoustics and planetary science</span><span class="talk-at"> · Flatiron Institute · job talk</span></span></li>
+            <li class="talk"><span class="talk-year"></span><span class="talk-body"><span class="talk-name">Jet marching methods for numerical geometric acoustics</span><span class="talk-at"> · Joint Mathematics Meetings</span></span></li>
+
+            <li class="talk"><span class="talk-year">2020</span><span class="talk-body"><span class="talk-name">Jet marching methods for solving the eikonal equation</span><span class="talk-at"> · Sayas Numerics Day</span></span></li>
+          </ul>
+        </section>
+
+        <section class="block" id="teaching">
+          <h2 class="section-title">Teaching</h2>
+          <ul class="teach-list">
+            <li><span class="teach-term">NYU · Spring 2023</span><span class="teach-course">Numerical Analysis</span></li>
+            <li><span class="teach-term">NYU · Fall 2022</span><span class="teach-course">Linear and Nonlinear Optimization</span></li>
+            <li><span class="teach-term">NYU · Spring 2022</span><span class="teach-course">Numerical Analysis</span></li>
+            <li><span class="teach-term">NYU · Fall 2021</span><span class="teach-course">Calculus 3</span></li>
+          </ul>
+        </section>
+
+        <footer class="site-footer">
+          <span>&copy; Samuel F. Potter</span>
+        </footer>
+
+      </main>
+    </div>
+  </body>
 </html>
